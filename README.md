@@ -8,6 +8,7 @@ During the Hackathon, three different image classification iterations were run, 
 
 1. **The first run (CLIP1)** used the zero-shot model, trained on ~ 2100 classification annotations produced by the Early Modern group. The amount of annotation entries was distributed as follows over the seven classes:
 
+| Class                 | Count      |
 | :-------------------- | :----------|
 | Anatomy               | 72         |
 | Architecture          | 26         |
