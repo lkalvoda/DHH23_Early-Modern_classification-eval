@@ -6,13 +6,13 @@ The Early Modern group investigated how the intellectual, economic, and societal
 
 During the Hackathon, three different image classification iterations were run, using or based on [the CLIP model](https://github.com/openai/CLIP):
 
-**1. The first run (CLIP1)** 
-------
+1. **The first run (CLIP1)** used the zero-shot model, trained on ~ 2100 classification annotations produced by the group.
+---- add numbers for annotations; no of groups, how many annotated per group ----
 
-**2. The second run (CLIP2)** 
------- 
 
-**3. The third run (CLIP3)** 
+2. **The second run (CLIP2)** 
+
+3. **The third run (CLIP3)**
 ------ 
 While CLIP1 and 2 both gave the top one classification prediction only, with CLIP3, we had it
 provide the two highest value predictions. This 'second most likely class' in the CLIP3 data, along with ------, makes it ideal for
