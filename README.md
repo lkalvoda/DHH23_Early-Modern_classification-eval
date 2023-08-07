@@ -24,3 +24,9 @@ H1:
 ## Methods
 
 ## Conclusions
+
+## Future directions
+Performing a similar mixed-methods analysis on the prediction results made by CLIP1 and CLIP2 each, and then comparing all three runs could bring valuable insight into which features in particular had the most profound effect on the correspondence of the actual category and the one predicted. This could be in both directions: which specs increase the model's 'correctness' significantly, and are there perhaps any that we had predicted to be effective, but ended up making no to little difference?
+
+### Acknowledgements
+I'd like to thank Ari Vesalainen for providing me with valuable details on the three model runs.
