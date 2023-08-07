@@ -17,6 +17,9 @@ analyses and subsequent interpretation. However, the accurracy span was wide in 
 - the model used in the third run was already customised based on human-annotated feedback on the previous two runs: --- and so ---
 
 ## Research question and hypothesis
+RQ: ------ Do the certainty scores in CLIP3 predictions reflect the actual categories and/or visual form of the images classified, and, if so, then what are the tendencies? What can we conclude about the performance of a model thus customised? --------
+H~0~:
+H1:
 
 ## Methods
 
