@@ -5,9 +5,16 @@ Quantitative and qualitative analysis of image classification results produced u
 The Early Modern group investigated how the intellectual, economic, and societal changes of the Enlightenment era were reflected in the use of scientific illustrations. The sample examined consisted of works aimed at eighteenth-century British audiences, collected in the Eighteenth Century Collections Online (ECCO). Specifically, we used data from the Scientific collection, counting just over 100 000 individual pages containing illustrations.
 
 During the Hackathon, three different image classification iterations were run, using or based on [the CLIP model](https://github.com/openai/CLIP):
-1. The first run (CLIP1) ------
-2. The second run (CLIP2) ------
-3. The third run (CLIP3) ------. While CLIP1 and 2 both gave the top one classification prediction only, with CLIP3, we had it
+
+**1. The first run (CLIP1)** 
+------
+
+**2. The second run (CLIP2)** 
+------ 
+
+**3. The third run (CLIP3)** 
+------ 
+While CLIP1 and 2 both gave the top one classification prediction only, with CLIP3, we had it
 provide the two highest value predictions. This 'second most likely class' in the CLIP3 data, along with ------, makes it ideal for
 further analysis. --------why---------
 
@@ -34,6 +41,7 @@ H0:
 H1:
 
 ## Methods
+To answer the above, I examine the 'first-choice category' values in the primary data, focussing on the highest and the lowest confidence values to scan the data for possible patterns. To interpret any tendencies found, I use preliminary evaluation data produced during the Hackathon ('Secondary data' above), and close-reading of the images themselves.
 
 ## Conclusions
 
