@@ -6,7 +6,7 @@ The Early Modern group investigated how the intellectual, economic, and societal
 
 During the Hackathon, three different image classification iterations were run, using or based on [the CLIP model](https://github.com/openai/CLIP):
 1. The first run (CLIP1) ------
-2. The second run [CLIP2) ------
+2. The second run (CLIP2) ------
 3. The third run (CLIP3) ------. While CLIP1 and 2 both gave the top one classification prediction only, with CLIP3, we had it
 provide the two highest value predictions. This 'second most likely class' in the CLIP3 data, along with ------, makes it ideal for
 further analysis. --------why---------
@@ -16,9 +16,21 @@ analyses and subsequent interpretation. However, the accurracy span was wide in 
 - the data from this run also provides the second most probable category the model assigned to each entry, which can shed light on the model's behaviour with this type of a dataset
 - the model used in the third run was already customised based on human-annotated feedback on the previous two runs: --- and so ---
 
+### Primary data
+A spreadsheet containing (per image):
+- URL from a database containing all images from the dataset (for qualitative close-reading analysis)
+- first-choice category and the certainty score of the classification (score is based on training data; for CLIP3 this is human-produced image annotations (classification))
+- second-choice category and -,,-
+
+### Secondary data
+A spreadsheet containing (per image):
+- URL from a -,,-
+- first-choice classification category as assigned by CLIP3
+- certainty score of the classification (as compared to human-annotated control batch; i.e. the probability of CLIP3 classifying an image as the same category that human annotators did)
+
 ## Research question and hypothesis
 RQ: ------ Do the certainty scores in CLIP3 predictions reflect the actual categories and/or visual form of the images classified, and, if so, then what are the tendencies? What can we conclude about the performance of a model thus customised? --------
-H~0~:
+H0:
 H1:
 
 ## Methods
