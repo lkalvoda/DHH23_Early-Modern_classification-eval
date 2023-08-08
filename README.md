@@ -57,7 +57,7 @@ provide the two highest value predictions. This 'second most likely class' in th
 In the Hackathon outcomes, only classification entries with min. 50% accuracy for the first candidate were included into the
 analyses and subsequent interpretation. However, the accurracy span was wide in all three runs. In this task, I summarise these tendencies, verify them with close-reading, and speculate on their possible reasons and outcomes. I do this on the data about the third run (CLIP3), for several reasons:
 - the data from this run also provides the second most probable category the model assigned to each entry, which can shed light on the model's behaviour with this type of a dataset
-- the model used in the third run was already customised based on human-annotated feedback on the previous two runs: --- and so ---
+- the model used in the third run was already customised based on human-annotated feedback on the previous two
 
 ### Primary data
 A spreadsheet containing (per image):
