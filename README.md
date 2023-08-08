@@ -6,8 +6,7 @@ The Early Modern group investigated how the intellectual, economic, and societal
 
 During the Hackathon, three different image classification iterations were run, using or based on [the CLIP model](https://github.com/openai/CLIP). Changes were made based on parallel close-reading analysis, as well as evaluation.
 
-### **1. The first run (CLIP1)** 
-used the zero-shot model, trained on ~ 2100 classification annotations produced by the Early Modern group. The amount of annotation entries was distributed over given classes as follows:
+**1. The first run (CLIP1)** used the zero-shot model, trained on ~ 2100 classification annotations produced by the Early Modern group. The amount of annotation entries was distributed over given classes as follows:
 
 | Class                    | Count   |
 | :----------------------- | :-------|
@@ -22,8 +21,7 @@ used the zero-shot model, trained on ~ 2100 classification annotations produced 
 
 These served as the training data for all three runs, with the second and third run having additional modifications. A line of reasoning to be examined below is whether the amount of training material in a category could affect the performance in it. However, a counter-argument would be that the sample was chosen randomly and presumed to be representative of the population (i.e., the whole dataset the group worked with).
 
-### **2. For the second run (CLIP2)**
-, the number and names of both classes and keywords were changed to:
+**2. For the second run (CLIP2)**, the number and names of both classes and keywords were changed to:
 
 | Category                          | Keywords                                                                                                                                            |
 | :-------------------------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -40,23 +38,21 @@ These served as the training data for all three runs, with the second and third 
 | 11. Zoology 1                     | "mammal animal horse cattle"                                                                                                                        |
 | 12. Zoology 2                     | "bird egg nest insect fish eel wing feather reptile butterfly horn"                                                                                 |
 
-### **3. For the third run (CLIP3)**
-, the categories and keywords were merged and/or extended as follows:
+**3. The third run (CLIP3)** model was fine-tuned to categories and keywords merged and/or extended as follows:
 
-| Category                 | Categories (and their keywords) merged into it |
-| :----------------------- | :----------------------------------------------|
-| 1. Anatomy               ||
-| 2. Architecture          ||
-| 3. Botany                ||
-| 4. Mathematics/Astronomy ||
-| 5. Mechanics/Tools       ||
-| 6. Miscellaneous/Other   ||
-| 7. Zoology               ||
+| Category                 | CLIP2 categories (and their keywords) it consists of |
+| :----------------------- | :----------------------------------------------------|
+| 1. Anatomy               | Anatomy                                              |
+| 2. Architecture          | Architecture, Agriculture/Gardening                  |
+| 3. Botany                | Botany, Microbiology, Agriculture/Gardening          |
+| 4. Mathematics/Astronomy | Mathematics/Geometry/Astronomy                       |
+| 5. Mechanics/Tools       | Mechanics/Tools, Agriculture/Gardening               |
+| 6. Miscellaneous/Other   | Cooking, Miscellaneous, Sea, Agriculture/Gardening   |
+| 7. Zoology               | Zoology 1, Zoology 2                                 |
 
 
 Additionally, while CLIP1 and 2 both gave the top one classification prediction only, with CLIP3, we had it
-provide the two highest value predictions. This 'second most likely class' in the CLIP3 data, along with ------, makes it ideal for
-further analysis. --------why---------
+provide the two highest value predictions. This 'second most likely class' in the CLIP3 data and the above information on categories and keywords make CLIP3 ideal for further analysis. The results could shed light on specifications desirable for work with similar Enlightenment era book illustrations.
 
 In the Hackathon outcomes, only classification entries with min. 50% accuracy for the first candidate were included into the
 analyses and subsequent interpretation. However, the accurracy span was wide in all three runs. In this task, I summarise these tendencies, verify them with close-reading, and speculate on their possible reasons and outcomes. I do this on the data about the third run (CLIP3), for several reasons:
