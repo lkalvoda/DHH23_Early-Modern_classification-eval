@@ -8,16 +8,16 @@ During the Hackathon, three different image classification iterations were run, 
 
 **1. The first run (CLIP1)** used the zero-shot model, trained on ~ 2100 classification annotations produced by the Early Modern group. The amount of annotation entries was distributed over given classes as follows:
 
-| Class                    | Count   |
-| :----------------------- | :-------|
-| 1. Anatomy               | 72      |
-| 2. Architecture          | 26      |
-| 3. Botany                | 393     |
-| 4. Mathematics/Astronomy | 896     |
-| 5. Mechanics/Tools       | 185     |
-| 6. Miscellaneous/Other   | 332     |
-| 7. Zoology               | 262     |
-| **{\textstyle \sum }**   | **2166**| 
+| Class                    | Count    |
+| :----------------------- | :--------|
+| 1. Anatomy               | 72       |
+| 2. Architecture          | 26       |
+| 3. Botany                | 393      |
+| 4. Mathematics/Astronomy | 896      |
+| 5. Mechanics/Tools       | 185      |
+| 6. Miscellaneous/Other   | 332      |
+| 7. Zoology               | 262      |
+| **Σ**                    | **2166** | 
 
 These served as the training data for all three runs, with the second and third run having additional modifications. A line of reasoning to be examined below is whether the amount of training material in a category could affect the performance in it. However, a counter-argument would be that the sample was chosen randomly and presumed to be representative of the population (i.e., the whole dataset the group worked with).
 
