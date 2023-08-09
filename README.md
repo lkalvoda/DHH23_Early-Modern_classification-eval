@@ -91,10 +91,14 @@ RQ: Do the certainty scores in CLIP3 predictions correspond to the actual catego
 To answer the above, I examined the 'first-choice category' values in the primary data, focussing mainly on the highest and the lowest confidence values to scan the data for possible patterns. To interpret any tendencies found, I used preliminary evaluation data produced during the Hackathon ('Secondary data' above), and close-reading of the images themselves. 
 
 To test H1, I started by filtering out entries with the highest and the lowest first-choice confidence scores: 
-**'Low-confidence' subset**
 
+**'Low-confidence' subset**<br>
+      x ∈ (0;30] <br>
+i.e.  0 < x ≤ 30.(0)
 
-**'High confidence' subset**
+**'High confidence' subset**<br>
+      x ∈ (70;30]<br>
+i.e.  70.(0) < x ≤ 100.(0)
 
 ## Results
 
