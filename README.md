@@ -71,18 +71,23 @@ A spreadsheet containing (per image):
 - CLIP3 first-choice classification category as assigned by CLIP3
 - CLIP3 certainty score of the classification (as compared to human-annotated control batch; i.e. the probability of CLIP3 classifying an image as the same category that human annotators did)
 
-## Research question and hypothesis
+## Research question(s), hypotheses
 RQ: Do the certainty scores in CLIP3 predictions correspond to the actual categories and/or visual form of the images classified, and, if so, then what are the tendencies? Is there significant variation in performance between clategories? Are there CLIP3 predictions not corresponding to human classification in cases classified by CLIP with low/high confidence? What can we conclude about the performance of a model thus customised?
 
 H0: There are no significant patterns in the performance of CLIP3 across categories.
+
 H1: There is a significant amount of misclassified images (as compared to human-produced classification).
+
 H2: CLIP3 performed significantly better in one or more categories (as compared to other categories).
+
 H3: CLIP3 performed significantly worse in one or more categories (as compared to other categories).
+
 H4: The classifications made by CLIP3 do not correspond to human classification in those cases where it states low prediction confidence.
+
 H5: The classifications made by CLIP3 do not correspond to human classification in those cases where it states high prediction confidence.
 
 ## Methods
-To answer the above, I examine the 'first-choice category' values in the primary data, focussing on the highest and the lowest confidence values to scan the data for possible patterns. To interpret any tendencies found, I use preliminary evaluation data produced during the Hackathon ('Secondary data' above), and close-reading of the images themselves.
+To answer the above, I examine the 'first-choice category' values in the primary data, focussing mainly on the highest and the lowest confidence values to scan the data for possible patterns. To interpret any tendencies found, I use preliminary evaluation data produced during the Hackathon ('Secondary data' above), and close-reading of the images themselves.
 
 ## Conclusions
 
