@@ -61,7 +61,6 @@ analyses and subsequent interpretation. However, the accurracy span was wide in 
 
 ### Primary data
 A spreadsheet containing (per image):
-<<<<<<< lkalvoda-patch-1
 - its URL (from a database containing all images from the dataset; for qualitative close-reading analysis)
 - CLIP3 first-choice category and the certainty score of that classification (score is based on training data; for CLIP3, this is human-produced image classification annotations)
 - CLIP3 second-choice category and the certainty score of that classification (-,,-)
@@ -93,7 +92,6 @@ To answer the above, I examined the 'first-choice category' values in the primar
 
 To test H1, I started by filtering out entries with the highest and the lowest first-choice confidence scores: 
 **'Low-confidence' subset**
-x 
 
 
 **'High confidence' subset**
