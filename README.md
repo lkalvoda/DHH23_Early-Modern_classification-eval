@@ -61,15 +61,15 @@ analyses and subsequent interpretation. However, the accurracy span was wide in 
 
 ### Primary data
 A spreadsheet containing (per image):
-- URL from a database containing all images from the dataset (for qualitative close-reading analysis)
-- CLIP3 first-choice category and the certainty score of the classification (score is based on training data; for CLIP3 this is human-produced image annotations (classification))
-- CLIP3 second-choice category and -,,-
+- its URL (from a database containing all images from the dataset; for qualitative close-reading analysis)
+- CLIP3 first-choice category and the certainty score of that classification (score is based on training data; for CLIP3, this is human-produced image classification annotations)
+- CLIP3 second-choice category and the certainty score of that classification (-,,-)
 
 ### Secondary data
 A spreadsheet containing (per image):
-- URL from a -,,-
-- CLIP3 first-choice classification category as assigned by CLIP3
-- CLIP3 certainty score of the classification (as compared to human-annotated control batch; i.e. the probability of CLIP3 classifying an image as the same category that human annotators did)
+- its URL (see Primary data)
+- CLIP3 first-choice category (see Primary data)
+- evaluation score of that classification (i.e., a percentage score expressing the probability of a human annotator classifying an image as belonging in the same first-choice category as CLIP3 did; based on human-annotated control batch produced by the group)
 
 ## Research question(s), hypotheses
 RQ: Do the certainty scores in CLIP3 predictions correspond to the actual categories and/or visual form of the images classified, and, if so, then what are the tendencies? Is there significant variation in performance between clategories? Are there CLIP3 predictions not corresponding to human classification in cases classified by CLIP with low/high confidence? What can we conclude about the performance of a model thus customised?
