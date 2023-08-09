@@ -1,6 +1,7 @@
 # Evaluation of CLIP-based classification of eighteenth-century images (ECCO)
 Quantitative and qualitative analysis of image classification results produced using a CLIP-based model. Extension of the [Early Modern group's work](https://github.com/dhh23/early_modern) during the Helsinki Digital Humanities Hackathon 2023.
 
+
 ## Introduction and data
 The Early Modern group investigated how the intellectual, economic, and societal changes of the Enlightenment era were reflected in the use of scientific illustrations. The sample examined consisted of works aimed at eighteenth-century British audiences, collected in the Eighteenth Century Collections Online (ECCO). Specifically, we used data from the Scientific collection, counting just over 100 000 individual pages containing illustrations.
 
@@ -66,47 +67,62 @@ A spreadsheet containing (per image):
 - CLIP3 second-choice category and the certainty score of that classification (-,,-)
 
 ### Secondary data
-A spreadsheet containing (per image):
+A spreadsheet containing (per every image from CLIP3 first-choice):
 - its URL (see Primary data)
 - CLIP3 first-choice category (see Primary data)
 - evaluation score of that classification (i.e., a percentage score expressing the probability of a human annotator classifying an image as belonging in the same first-choice category as CLIP3 did; based on human-annotated control batch produced by the group)
 
+
 ## Research question(s), hypotheses
 RQ: Do the certainty scores in CLIP3 predictions correspond to the actual categories and/or visual form of the images classified, and, if so, then what are the tendencies? Is there significant variation in performance between clategories? Are there CLIP3 predictions not corresponding to human classification in cases classified by CLIP with low/high confidence? What can we conclude about the performance of a model thus customised?
 
-
 **H0:** There are no significant patterns in the performance of CLIP3 across categories.
 
-**H1:** There is a significant amount of misclassified images (as compared to human-produced classification).
+**H1:** There is a significant amount of misclassified images (as compared to human-produced classification).<br>
+(fals.: There is not a significant amount of misclassified images (as compared to human-produced classification).)
 
-**H2:** CLIP3 performed significantly better in one or more categories (as compared to other categories).
+**H2:** CLIP3 performed significantly better in one or more categories (as compared to other categories).<br>
+(fals.: CLIP3 did not perform significantly better in any category (as compared to other categories).)
 
-**H3:** CLIP3 performed significantly worse in one or more categories (as compared to other categories).
+**H3:** CLIP3 performed significantly worse in one or more categories (as compared to other categories).<br>
+(fals.: CLIP3 did not perform significantly worse in any category (as compared to other categories).)
 
-**H4:** The classifications made by CLIP3 do not correspond to human classification in those cases where it states low prediction confidence.
+**H4:** A significant amount of classifications made by CLIP3 does not correspond to human classification in those cases where CLIP3 states low prediction confidence.<br>
+(fals.: There is not a significant amount of classifications made by CLIP3 that do not correspond to human classification in those cases where CLIP3 states low prediction confidence.)
 
-**H5:** The classifications made by CLIP3 do not correspond to human classification in those cases where it states high prediction confidence.
+**H5:** A significant amount of classifications made by CLIP3 does not correspond to human classification in those cases where CLIP3 states high prediction confidence.<br>
+(fals.: There is not a significant amount of classifications made by CLIP3 that do not correspond to human classification in those cases where CLIP3 states high prediction confidence.)
 
 ## Methods
 To answer the above, I examined the 'first-choice category' values in the primary data, focussing mainly on the highest and the lowest confidence values to scan the data for possible patterns. To interpret any tendencies found, I used preliminary evaluation data produced during the Hackathon ('Secondary data' above), and close-reading of the images themselves. 
 
-To test H1, I started by filtering out entries with the highest and the lowest first-choice confidence scores: 
-
-**'Low-confidence' subset**<br>
+To test H4 and H5, I started by filtering out entries with the highest and the lowest first-choice confidence scores in the following ranges: 
+**'Low-confidence' subset**  (2735 entries)<br>
       x ∈ (0;30] <br>
 i.e.  0 < x ≤ 30.(0)
 
-**'High confidence' subset**<br>
+
+**'High confidence' subset** (95 782 entries)<br>
       x ∈ (70;30]<br>
 i.e.  70.(0) < x ≤ 100.(0)
 
+----------for low-c, take a 10% sample (270) distributed ?evenly? across that population and close-read to verify Y/N; for high-c, use eval table to have a look at sample of 270 distributed ?evenly? across that population => in both cases, log 'correct' as 1; 'incorrect' as 0; if 'incorrect' is more than X% from that sample,there is evidence supporting H4, resp. H5
+
+
+------- H1 is very broad, so to answer it, I first consider the outcomes of H4 and H5 with the following rationale: if there is evidence supporting either one or both, I presume it more likely for H1 to be supported. If this is the case, I will examine a more representative selection of data in order to examine H1. -----------
+entries with the lowest and the highest confidence scores (0-20, 80-100, ?and those in the middle, to have a better idea: 40-60/45-55) - depending on the results from H4, H5-------------
+
+
+
+H2 and H3: take the bottom and top 30 results and check what the distribution is across categories -> graphs
+
+
 ## Results
 
-### Low confidence
 
-### High confidence
 
 ## Conclusions
+
 
 ## Future directions
 Performing a similar mixed-methods analysis on the prediction results made by CLIP1 and CLIP2 each, and then comparing all three runs could bring valuable insight into which features in particular had the most profound effect on the correspondence of the actual category and the one predicted. This could be in both directions: which specs increase the model's 'correctness' significantly, and are there perhaps any that we had predicted to be effective, but ended up making no to little difference?
