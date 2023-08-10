@@ -96,7 +96,7 @@ RQ: Do the certainty scores in CLIP3 predictions correspond to the actual catego
 ## Methods
 To answer the above, I examined the 'first-choice category' values in the primary data, focussing mainly on the highest and the lowest confidence values to scan the data for possible patterns. To interpret any tendencies found, I used preliminary evaluation data produced during the Hackathon ('Secondary data' above), and close-reading of the images themselves. 
 
-To test H4 and H5, I started by filtering out entries with the highest and the lowest first-choice confidence scores in the following ranges: 
+To test H4 and H5, I started by filtering out entries with the highest and the lowest first-choice confidence scores in the following ranges:<br>
 **'Low-confidence' subset**  (2735 entries)<br>
       x ∈ (0;30] <br>
 i.e.  0 < x ≤ 30.(0)
@@ -106,7 +106,30 @@ i.e.  0 < x ≤ 30.(0)
       x ∈ (70;30]<br>
 i.e.  70.(0) < x ≤ 100.(0)
 
-----------for low-c, take a 10% sample (270) distributed ?evenly? across that population and close-read to verify Y/N; for high-c, use eval table to have a look at sample of 270 distributed ?evenly? across that population => in both cases, log 'correct' as 1; 'incorrect' as 0; if 'incorrect' is more than X% from that sample,there is evidence supporting H4, resp. H5
+For the low-confidence subset, I started by looking at the distribution of certainty scores:<br>
+| Score range | Number of entries |
+| :---------- | :-----------------|
+| [0-5)       | 0                 |
+| [5-10)      | 0                 |
+| [10-15)     | 0                 |
+| [15-20)     | 18                |
+| [20_25)     | 656               |
+| [25_30)	  | 2060              |
+
+Besides being a valuable item of information in and of itself, it allowed me to take a weighted sample from the subset. Doing this enabled me to conduct a mixed-methods analysis viably, especially later for the second subset.
+
+| Score range | Number of entries |
+| :---------- | :-----------------|
+| [70-75)     | 7904              |
+| [75-80)     | 7857              |
+| [80-85)	  | 8089              |
+| [85-90)	  | 9443              |
+| [90-95)	  | 12161             |
+| [95-100)	  | 50327             |
+
+
+take a 10% sample (270) distributed ?evenly? across that population and close-read to verify whether each of these corresponds with human-produced annotations Y/N; for high-c, use eval table to have a look at sample of 270 distributed ?evenly? across that population => in both cases, log 'correct' as 1; 'incorrect' as 0; if 'incorrect' is more than X% from that sample,there is evidence supporting H4, resp. H5
+
 
 
 ------- H1 is very broad, so to answer it, I first consider the outcomes of H4 and H5 with the following rationale: if there is evidence supporting either one or both, I presume it more likely for H1 to be supported. If this is the case, I will examine a more representative selection of data in order to examine H1. -----------
