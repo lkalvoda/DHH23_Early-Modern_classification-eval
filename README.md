@@ -97,12 +97,12 @@ RQ: Do the certainty scores in CLIP3 predictions correspond to the actual catego
 To answer the above, I examined the 'first-choice category' values in the primary data, focussing mainly on the highest and the lowest confidence values to scan the data for possible patterns. To interpret any tendencies found, I used preliminary evaluation data produced during the Hackathon ('Secondary data' above), and close-reading of the images themselves. 
 
 To test H4 and H5, I started by filtering out entries with the highest and the lowest first-choice confidence scores in the following ranges:<br>
-**'Low-confidence' subset**  (2735 entries)<br>
+**'Low-confidence' subset**  (2734 entries)<br>
       x ∈ (0;30] <br>
 i.e.  0 < x ≤ 30.(0)
 
 
-**'High confidence' subset** (95 782 entries)<br>
+**'High confidence' subset** (95 781 entries)<br>
       x ∈ (70;30]<br>
 i.e.  70.(0) < x ≤ 100.(0)
 
@@ -115,6 +115,7 @@ For the low-confidence subset, I started by looking at the distribution of certa
 | [15-20)     | 18                |
 | [20_25)     | 656               |
 | [25_30)	  | 2060              |
+| **Σ**       | **2734**          | 
 
 Besides being a valuable item of information in and of itself, it allowed me to take a weighted sample from the subset. Doing this enabled me to conduct a mixed-methods analysis viably, especially later for the second subset.
 
@@ -126,6 +127,7 @@ Besides being a valuable item of information in and of itself, it allowed me to 
 | [85-90)	  | 9443              |
 | [90-95)	  | 12161             |
 | [95-100)	  | 50327             |
+| **Σ**       | **95781**         | 
 
 
 take a 10% sample (270) distributed ?evenly? across that population and close-read to verify whether each of these corresponds with human-produced annotations Y/N; for high-c, use eval table to have a look at sample of 270 distributed ?evenly? across that population => in both cases, log 'correct' as 1; 'incorrect' as 0; if 'incorrect' is more than X% from that sample,there is evidence supporting H4, resp. H5
