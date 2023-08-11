@@ -48,7 +48,7 @@ These served as the training data for all three runs, with the second and third 
 | Category                          | CLIP2 categories (and their keywords) it consists of |
 | :-------------------------------- | :----------------------------------------------------|
 | 1. Anatomy                        | Anatomy                                              |
-| 2. Architecture                   | Architecture, Agriculture/Gardening                  |
+| 2. Architecture                   | Architecture                                         |
 | 3. Botany                         | Botany, Agriculture/Gardening                        |
 | 4. Cooking                        | Cooking                                              |
 | 5. Mathematics/Geometry/Astronomy | Mathematics/Geometry/Astronomy                       |
