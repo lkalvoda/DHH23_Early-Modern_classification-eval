@@ -45,15 +45,18 @@ These served as the training data for all three runs, with the second and third 
 
 **3. The third run (CLIP3)** model was fine-tuned to categories and keywords merged and/or extended as follows:
 
-| Category                 | CLIP2 categories (and their keywords) it consists of |
-| :----------------------- | :----------------------------------------------------|
-| 1. Anatomy               | Anatomy                                              |
-| 2. Architecture          | Architecture, Agriculture/Gardening                  |
-| 3. Botany                | Botany, Microbiology, Agriculture/Gardening          |
-| 4. Mathematics/Astronomy | Mathematics/Geometry/Astronomy                       |
-| 5. Mechanics/Tools       | Mechanics/Tools, Agriculture/Gardening               |
-| 6. Miscellaneous/Other   | Cooking, Miscellaneous, Sea, Agriculture/Gardening   |
-| 7. Zoology               | Zoology 1, Zoology 2                                 |
+| Category                          | CLIP2 categories (and their keywords) it consists of |
+| :-------------------------------- | :----------------------------------------------------|
+| 1. Anatomy                        | Anatomy                                              |
+| 2. Architecture                   | Architecture, Agriculture/Gardening                  |
+| 3. Botany                         | Botany, Agriculture/Gardening                        |
+| 4. Cooking                        | Cooking                                              |
+| 5. Mathematics/Geometry/Astronomy | Mathematics/Geometry/Astronomy                       |
+| 6. Mechanics/Tools                | Mechanics/Tools, Agriculture/Gardening               |
+| 7. Microbiology                   | Microbiology                                         |
+| 8. Miscellaneous/Other            | Miscellaneous, Agriculture/Gardening                 |
+| 9. Sea                            | Sea                                                  |
+| 10. Zoology                       | Zoology 1, Zoology 2                                 |
 
 *Table 3 Categories and keywords for CLIP3*
 
@@ -168,7 +171,7 @@ Note: A potential caveat of this method is that even a human assessor cannot alw
 
 *Figure 2 Image annotated as incorrectly classified by CLIP3 as either Zoology or Mechanics/Tools*
 
-
+It must be stressed that often, it is simply not possible for a human annotator to classify an image into one category, either, in which case any CLIP3 classification that is not in clear contradiction with the annotator's observation is noted as correct.
 
 for high-c, use eval table to have a look at sample of 270 distributed ?evenly? across that population => in both cases, log 'correct' as 1; 'incorrect' as 0; if 'incorrect' is more than X% from that sample,there is evidence supporting H4, resp. H5
 
