@@ -19,6 +19,7 @@ During the Hackathon, three different image classification iterations were run, 
 | 6. Miscellaneous/Other   | 332      |
 | 7. Zoology               | 262      |
 | **Σ**                    | **2166** | 
+*Table 1* The figures for our training data images, as classified into categories by human annotators
 
 These served as the training data for all three runs, with the second and third run having additional modifications. A line of reasoning to be examined below is whether the amount of training material in a category could affect the performance in it. However, a counter-argument would be that the sample was chosen randomly and presumed to be representative of the population (i.e., the whole dataset the group worked with).
 
@@ -38,6 +39,7 @@ These served as the training data for all three runs, with the second and third 
 | 10. Sea                           | "sea water boat navigation compass naval ship"                                                                                                      |
 | 11. Zoology 1                     | "mammal animal horse cattle"                                                                                                                        |
 | 12. Zoology 2                     | "bird egg nest insect fish eel wing feather reptile butterfly horn"                                                                                 |
+*Table 2* Categories and keywords for CLIP2
 
 **3. The third run (CLIP3)** model was fine-tuned to categories and keywords merged and/or extended as follows:
 
@@ -50,7 +52,7 @@ These served as the training data for all three runs, with the second and third 
 | 5. Mechanics/Tools       | Mechanics/Tools, Agriculture/Gardening               |
 | 6. Miscellaneous/Other   | Cooking, Miscellaneous, Sea, Agriculture/Gardening   |
 | 7. Zoology               | Zoology 1, Zoology 2                                 |
-
+*Table 3* Categories and keywords for CLIP3
 
 Additionally, while CLIP1 and 2 both gave the top one classification prediction only, with CLIP3, we had it
 provide the two highest value predictions. This 'second most likely class' in the CLIP3 data and the above information on categories and keywords make CLIP3 ideal for further analysis. The results could shed light on specifications desirable for work with similar Enlightenment era book illustrations.
@@ -87,16 +89,22 @@ RQ: Do the certainty scores in CLIP3 predictions correspond to the actual catego
 **H3:** CLIP3 performed significantly worse in one or more categories (as compared to other categories).<br>
 (fals.: CLIP3 did not perform significantly worse in any category (as compared to other categories).)
 
-**H4:** A significant amount of classifications made by CLIP3 does not correspond to human classification in those cases where CLIP3 states low prediction confidence.<br>
-(fals.: There is not a significant amount of classifications made by CLIP3 that do not correspond to human classification in those cases where CLIP3 states low prediction confidence.)
+**H4a:** A significant amount of first-choice classifications made by CLIP3 does not correspond to human classification in those cases where CLIP3 states low prediction confidence.<br>
+(fals.: There is not a significant amount of first-choice classifications made by CLIP3 that do not correspond to human classification in those cases where CLIP3 states low prediction confidence.)
 
-**H5:** A significant amount of classifications made by CLIP3 does not correspond to human classification in those cases where CLIP3 states high prediction confidence.<br>
-(fals.: There is not a significant amount of classifications made by CLIP3 that do not correspond to human classification in those cases where CLIP3 states high prediction confidence.)
+**H4b:** A significant amount of second-choice classifications made by CLIP3 does not correspond to human classification in those cases where CLIP3 states low prediction confidence.<br>
+(fals.: There is not a significant amount of second-choice classifications made by CLIP3 that do not correspond to human classification in those cases where CLIP3 states low prediction confidence.)
+
+**H5:** A significant amount of first-choice classifications made by CLIP3 does not correspond to human classification in those cases where CLIP3 states high prediction confidence.<br>
+(fals.: There is not a significant amount of first-choice classifications made by CLIP3 that do not correspond to human classification in those cases where CLIP3 states high prediction confidence.)
+
+**H5:** A significant amount of second-choice classifications made by CLIP3 does not correspond to human classification in those cases where CLIP3 states high prediction confidence.<br>
+(fals.: There is not a significant amount of second-choice classifications made by CLIP3 that do not correspond to human classification in those cases where CLIP3 states high prediction confidence.)
 
 ## Methods
 To answer the above, I examined the 'first-choice category' values in the primary data, focussing mainly on the highest and the lowest confidence values to scan the data for possible patterns. To interpret any tendencies found, I used preliminary evaluation data produced during the Hackathon ('Secondary data' above), and close-reading of the images themselves. 
 
-To test H4 and H5, I started by filtering out entries with the highest and the lowest first-choice confidence scores in the following ranges:<br>
+To test H4a/b and H5a/b, I started by filtering out entries with the highest and the lowest first-choice confidence scores in the following ranges:<br>
 **'Low-confidence' subset**  (2734 entries)<br>
       x ∈ (0;30] <br>
 i.e.  0 < x ≤ 30.(0)
@@ -106,7 +114,7 @@ i.e.  0 < x ≤ 30.(0)
       x ∈ (70;30]<br>
 i.e.  70.(0) < x ≤ 100.(0)
 
-For the low-confidence subset, I started by looking at the distribution of certainty scores:<br>
+For the 'Low-confidence' subset, I started by looking at the distribution of certainty scores:<br>
 | Score range | Number of entries |
 | :---------- | :-----------------|
 | [0-5)       | 0                 |
@@ -116,8 +124,9 @@ For the low-confidence subset, I started by looking at the distribution of certa
 | [20_25)     | 656               |
 | [25_30)	  | 2060              |
 | **Σ**       | **2734**          | 
+*Table 4* Detailed distribution of entries per certainty score range in the 'Low-confidence' subset
 
-Besides being a valuable item of information in and of itself, it allowed me to take a weighted sample from the subset. Doing this enabled me to conduct a mixed-methods analysis viably, especially later for the second subset.
+Besides being a valuable item of information in and of itself, it allowed me to take a weighted sample from each subset for the close-reading result verification below. Doing this enabled me to conduct a mixed-methods analysis viably, especially later for the second subset. Below is the same data for the second subset:
 
 | Score range | Number of entries |
 | :---------- | :-----------------|
@@ -128,9 +137,23 @@ Besides being a valuable item of information in and of itself, it allowed me to 
 | [90-95)	  | 12161             |
 | [95-100)	  | 50327             |
 | **Σ**       | **95781**         | 
+*Table 5* Detailed distribution of entries per certainty score range in the 'High-confidence' subset
+
+Next (this further narrowing down of the subsets was mainly due to the high number of entires especially in the second subset), I took a random sample of approximately 270 entries (guided by: 10 % of 'Low-confidence' subset). The distribution across the 'Score ranges' (See Table 4 above) was weighted by the respective number of entries in these; i.e., for the 'Low-confidence' subset:
+
+| Score range | Number of entries for analysis |
+| :---------- | :------------------------------|
+| [15-20)     | 2                              |
+| [20_25)     | 65                             |
+| [25_30)	  | 203                            |
+| **Σ**       | **270**                        | 
+
+I close-read the randomly generated entries to verify whether the CLIP3 classification given for each of these corresponds to my own (i.e., human-produced) classification. I noted this down in a 0-1 system. I annotated both the first- and the second-choice classification in this manner, and the close-reading analysis results are as follows:
 
 
-take a 10% sample (270) distributed ?evenly? across that population and close-read to verify whether each of these corresponds with human-produced annotations Y/N; for high-c, use eval table to have a look at sample of 270 distributed ?evenly? across that population => in both cases, log 'correct' as 1; 'incorrect' as 0; if 'incorrect' is more than X% from that sample,there is evidence supporting H4, resp. H5
+
+
+for high-c, use eval table to have a look at sample of 270 distributed ?evenly? across that population => in both cases, log 'correct' as 1; 'incorrect' as 0; if 'incorrect' is more than X% from that sample,there is evidence supporting H4, resp. H5
 
 
 
