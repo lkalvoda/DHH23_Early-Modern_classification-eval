@@ -158,9 +158,16 @@ Next (this further narrowing down of the subsets was mainly due to the high numb
 I close-read the randomly generated entries to verify whether the CLIP3 classification given for each of these corresponds to my own (i.e., human-produced) classification. I noted this down in a 0-1 system. I annotated both the first- and the second-choice classification in this manner, and the close-reading analysis results are as follows:
 
 
-Note: A potential caveat of this method is that even a human assessor cannot always classify an illustration with full certainty, either; e.g., Anatomy v Botany in:
+Note: A potential caveat of this method is that even a human assessor cannot always classify an illustration with full certainty, either; e.g., Anatomy v Botany in Figure 1 below. In this particular case, CLIP3 classified this image as Anatomy (20.57 %) or Botany (19.02 %), so both answers were noted as '1'. The approach taken is the same used in the group work evaluation: if a classification is feasible, it is regarded as correct; otherwise, it is obviously incorrect. For example, in Figure 2 we can see an image that would belong to Miscellaneous/Other, so both the first-choice Zoology (20.73 %) and the second-choice Mechanics/Tools (20.09 %) get a score of '0'.
+
 <img width="200" alt="Figure 1" src="https://github.com/lkalvoda/DHH23_early-modern_classification-eval/assets/135222568/23a39c4e-a3ce-477c-8ef3-f6d46c535644">
-For instance in this particular case, CLIP3 classified this image as anatomy (20.57 %) or Botany (19.02 %), so both answers were noted as '1'. The approach taken is the same used in the group work evaluation: if a classification is feasible, it is regarded as correct; otherwise, it is obviously incorrect.
+
+*Figure 1 Image annotated as correctly classified by CLIP3 as either Anatomy (first-choice) or Botany (second-choice)*
+
+![Figure 2](https://github.com/lkalvoda/DHH23_early-modern_classification-eval/assets/135222568/8d7cd94e-a7bc-4975-844d-dadb85e67573)
+
+*Figure 2 Image annotated as incorrectly classified by CLIP3 as either Zoology or Mechanics/Tools*
+
 
 
 for high-c, use eval table to have a look at sample of 270 distributed ?evenly? across that population => in both cases, log 'correct' as 1; 'incorrect' as 0; if 'incorrect' is more than X% from that sample,there is evidence supporting H4, resp. H5
