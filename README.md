@@ -20,7 +20,7 @@ During the Hackathon, three different image classification iterations were run, 
 | 7. Zoology               | 262      |
 | **Σ**                    | **2166** |
 
-*Table 1* The figures for our training data images, as classified into categories by human annotators
+*Table 1 The figures for our training data images, as classified into categories by human annotators*
 
 These served as the training data for all three runs, with the second and third run having additional modifications. A line of reasoning to be examined below is whether the amount of training material in a category could affect the performance in it. However, a counter-argument would be that the sample was chosen randomly and presumed to be representative of the population (i.e., the whole dataset the group worked with).
 
@@ -41,7 +41,7 @@ These served as the training data for all three runs, with the second and third 
 | 11. Zoology 1                     | "mammal animal horse cattle"                                                                                                                        |
 | 12. Zoology 2                     | "bird egg nest insect fish eel wing feather reptile butterfly horn"                                                                                 |
 
-*Table 2* Categories and keywords for CLIP2
+*Table 2 Categories and keywords for CLIP2*
 
 **3. The third run (CLIP3)** model was fine-tuned to categories and keywords merged and/or extended as follows:
 
@@ -55,7 +55,7 @@ These served as the training data for all three runs, with the second and third 
 | 6. Miscellaneous/Other   | Cooking, Miscellaneous, Sea, Agriculture/Gardening   |
 | 7. Zoology               | Zoology 1, Zoology 2                                 |
 
-*Table 3* Categories and keywords for CLIP3
+*Table 3 Categories and keywords for CLIP3*
 
 Additionally, while CLIP1 and 2 both gave the top one classification prediction only, with CLIP3, we had it
 provide the two highest value predictions. This 'second most likely class' in the CLIP3 data and the above information on categories and keywords make CLIP3 ideal for further analysis. The results could shed light on specifications desirable for work with similar Enlightenment era book illustrations.
@@ -128,7 +128,7 @@ For the 'Low-confidence' subset, I started by looking at the distribution of cer
 | [25_30)	  | 2060              |
 | **Σ**       | **2734**          | 
 
-*Table 4* Detailed distribution of entries per certainty score range in the 'Low-confidence' subset
+*Table 4 Detailed distribution of entries per certainty score range in the 'Low-confidence' subset*
 
 Besides being a valuable item of information in and of itself, it allowed me to take a weighted sample from each subset for the close-reading result verification below. Doing this enabled me to conduct a mixed-methods analysis viably, especially later for the second subset. Below is the same data for the second subset:
 
@@ -142,7 +142,7 @@ Besides being a valuable item of information in and of itself, it allowed me to 
 | [95-100)	  | 50327             |
 | **Σ**       | **95781**         | 
 
-*Table 5* Detailed distribution of entries per certainty score range in the 'High-confidence' subset
+*Table 5 Detailed distribution of entries per certainty score range in the 'High-confidence' subset*
 
 Next (this further narrowing down of the subsets was mainly due to the high number of entires especially in the second subset), I took a random sample of approximately 270 entries (guided by: 10 % of 'Low-confidence' subset). The distribution across the 'Score ranges' (See Table 4 above) was weighted by the respective number of entries in these; i.e., for the 'Low-confidence' subset:
 
@@ -153,11 +153,14 @@ Next (this further narrowing down of the subsets was mainly due to the high numb
 | [25_30)	  | 203                            |
 | **Σ**       | **270**                        | 
 
-*Table 6* Number of entries for analysis in the 'Low-confidence' subset
+*Table 6 Number of entries for analysis in the 'Low-confidence' subset*
 
 I close-read the randomly generated entries to verify whether the CLIP3 classification given for each of these corresponds to my own (i.e., human-produced) classification. I noted this down in a 0-1 system. I annotated both the first- and the second-choice classification in this manner, and the close-reading analysis results are as follows:
 
 
+Note: A potential caveat of this method is that even a human assessor cannot always classify an illustration with full certainty, either; e.g., Anatomy v Botany in:
+<img width="200" alt="Figure 1" src="https://github.com/lkalvoda/DHH23_early-modern_classification-eval/assets/135222568/23a39c4e-a3ce-477c-8ef3-f6d46c535644">
+For instance in this particular case, CLIP3 classified this image as anatomy (20.57 %) or Botany (19.02 %), so both answers were noted as '1'. The approach taken is the same used in the group work evaluation: if a classification is feasible, it is regarded as correct; otherwise, it is obviously incorrect.
 
 
 for high-c, use eval table to have a look at sample of 270 distributed ?evenly? across that population => in both cases, log 'correct' as 1; 'incorrect' as 0; if 'incorrect' is more than X% from that sample,there is evidence supporting H4, resp. H5
@@ -177,6 +180,7 @@ H2 and H3: take the bottom and top 30 results and check what the distribution is
 
 
 ## Conclusions
+
 
 
 ## Future directions
