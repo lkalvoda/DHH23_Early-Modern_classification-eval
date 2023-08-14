@@ -158,11 +158,17 @@ Next (this further narrowing down of the subsets was mainly due to the high numb
 
 *Table 6 Number of entries for analysis in the 'Low-confidence' subset*
 
-I close-read the randomly generated entries to verify whether the CLIP3 classification given for each of these corresponds to my own (i.e., human-produced) classification. I noted this down in a 0-1 system. I annotated both the first- and the second-choice classification in this manner, and the close-reading analysis results follow below. The annotation possibilities were as such:<br>
-- 0-0 = neither classification is possibly correct
-- 0-1 = first-choice is incorrect, second-choice is correct
-- 1-0 = first-choice is correct, second-choice is incorrect
-- 1-1 = both classifications are correct (acceptable)
+I close-read the randomly generated entries to verify whether the CLIP3 classification given for each of these corresponds to my own (i.e., human-produced) classification. I noted this down in a 0-1 system. I annotated both the first- and the second-choice classification in this manner, and the close-reading analysis results follow below. Table 7 below shows the four annotation possibilities and the actual distribution of these among the 270 entries annotated:<br>
+
+| First-second                                              | Occurrences in 'Low-confidence' subset |
+| :-------------------------------------------------------- | :--------------------------------------|
+| 0-0 = neither classification is possibly correct          | 101                                    |
+| 0-1 = first-choice is incorrect, second-choice is correct | 79                                     |
+| 1-0 = first-choice is correct, second-choice is incorrect | 69                                     |
+| 1-1 = both classifications are correct (acceptable)       | 21                                     |
+| **Σ**                                                     | **270**                                | 
+
+*Table 7 The four annotation possibilities for human evaluation of CLIP3 classifications of the 'Low-confidence' subset (random weighted sample) explained; how many times each one of these combinations occurrs in the dataset*
 
 Note: A potential caveat of this method is that even a human assessor cannot always classify an illustration with full certainty, either; e.g., Anatomy v Botany in Figure 1 below. In this particular case, CLIP3 classified this image as Anatomy (20.57 %) or Botany (19.02 %), so both answers were noted as '1'. The approach taken is the same used in the group work evaluation: if a classification is feasible, it is regarded as correct; otherwise, it is obviously incorrect. For example, in Figure 2 we can see an image that would belong to Miscellaneous/Other, so both the first-choice Zoology (20.73 %) and the second-choice Mechanics/Tools (20.09 %) get a score of '0'.
 
@@ -174,7 +180,7 @@ Note: A potential caveat of this method is that even a human assessor cannot alw
 
 *Figure 2 Image annotated as incorrectly classified by CLIP3 as either Zoology or Mechanics/Tools*
 
-It must be stressed that often, it is simply not possible for a human annotator to classify an image into one category, either, in which case any CLIP3 classification that is not in clear contradiction with the annotator's observation is noted as correct. Below are several examples of different kindss of frequent misclassifications (first-choice or both choices).
+It must be stressed that often, it is simply not possible for a human annotator to classify an image into one category, either, in which case any CLIP3 classification that is not in clear contradiction with the annotator's observation is noted as correct. Below are several examples of different kinds of frequent misclassifications (first-choice or both choices).
 
 A strong tendency observed in the 'Low-confidence' subset was for images to be falsely classified as either Zoology or Architecture, no matter their human-annotated class.
 A peculiar example (Figures 3 and 4) that was quite frequent was (obviously to the human eye) geometric shapes classified by CLIP3 as first-class Zoology.
@@ -204,6 +210,8 @@ Finally, an example that we would actually have expected, is a botanical drawing
 <img width="200" alt="FIgure 7" src="https://github.com/lkalvoda/DHH23_early-modern_classification-eval/assets/135222568/0a9e9213-2ebd-4271-b437-6a7913b747c9">
 
 *Figure 7 classified by CLIP3 as both Botany and Zoology with the same certainty (25.93 %)*
+
+With the above in mind, when we turn back to Table 7, we can see that the largest portion of entries was misclassified entirely (0-0). The 1-1 and 1-0 scores can be taken as one category, since both are perfectly correct. The 0-1 category is notably large, and would definitely merit further analysis, as patterns in it could provide directions for specification alterations perhaps easier to implement than, say, in the 0-0 case.
 
 
 
