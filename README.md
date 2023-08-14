@@ -211,8 +211,16 @@ Finally, an example that we would actually have expected, is a botanical drawing
 
 *Figure 7 classified by CLIP3 as both Botany and Zoology with the same certainty (25.93 %)*
 
-With the above in mind, when we turn back to Table 7, we can see that the largest portion of entries was misclassified entirely (0-0). The 1-1 and 1-0 scores can be taken as one category, since both are perfectly correct. The 0-1 category is notably large, and would definitely merit further analysis, as patterns in it could provide directions for specification alterations perhaps easier to implement than, say, in the 0-0 case.
+With the above in mind, when we turn back to Table 7, we can see that the largest portion of entries was misclassified entirely (0-0). The 1-1 and 1-0 scores can be taken as one category, since both are perfectly correct. The 0-1 category is notably large, and would definitely merit further analysis, as described in the relevant section below.
 
+The summarising figures (for each choice out of the total of 270) are as follows:
+- first-choice correct: 91
+- first-choice incorrect: 179
+  
+- second-choice correct: 100
+- second-choice incorrect: 170,
+
+presenting evidence in the direction of considering both H4a and H4b valid.
 
 
 for high-c, use eval table to have a look at sample of 270 distributed ?evenly? across that population => in both cases, log 'correct' as 1; 'incorrect' as 0; if 'incorrect' is more than X% from that sample,there is evidence supporting H4, resp. H5
@@ -237,6 +245,10 @@ H2 and H3: take the bottom and top 30 results and check what the distribution is
 
 ## Future directions
 Performing a similar mixed-methods analysis on the prediction results made by CLIP1 and CLIP2 each, and then comparing all three runs could bring valuable insight into which features in particular had the most profound effect on the correspondence of the actual category and the one predicted. This could be in both directions: which specs increase the model's 'correctness' significantly, and are there perhaps any that we had predicted to be effective, but ended up making no to little difference?
+
+For the overview collected for H4a/b, it could be directly applicable to get more information on the patterns in the 0-1 category. Close-reading analysis could provide directions for specification alterations to get the result to 'flip' to 1-0 or 1-1. The correct second-choice classification might be a very useful lead for a relatively low-effort boost (cf. e.g., the 0-0 case).<br>
+The evidence collected for H4a/b being true aligns with the low certainty levels given by CLIP3 for the classification instances in the 'Low-confidence' subset. Also in the light of this, we would expect the opposite tendency in the 'High-confidence' subset.
+
 
 ## Acknowledgements
 I'd like to thank Ari Vesalainen for providing me with valuable details on the three model runs.
