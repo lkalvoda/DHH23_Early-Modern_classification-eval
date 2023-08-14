@@ -1,4 +1,4 @@
-<img width="676" alt="miscl as animal 27 73 and misc 24 48" src="https://github.com/lkalvoda/DHH23_early-modern_classification-eval/assets/135222568/0f6060dd-d278-46c3-8182-b0aa0f6d3660"># Evaluation of CLIP-based classification of eighteenth-century images (ECCO)
+# Evaluation of CLIP-based classification of eighteenth-century images (ECCO)
 Quantitative and qualitative analysis of image classification results produced using a CLIP-based model. Extension of the [Early Modern group's work](https://github.com/dhh23/early_modern) during the Helsinki Digital Humanities Hackathon 2023.
 
 
@@ -190,13 +190,13 @@ Another CLIP3 tendency in this subset was classifying what we would describe as 
 
 *Figure 5 Image classified by CLIP3 as Zoology (27.51 %) and Miscellaneous/Other (15.67 %)*
 
-Figure 6 shows another example of an obvious misclassification (human-annotated only possibly as Miscellaneous/Other).
+Figure 6 shows another example of an obvious misclassification (human-annotated only possibly as Miscellaneous/Other):
 
 <img width="140" alt="Figure 6" src="https://github.com/lkalvoda/DHH23_early-modern_classification-eval/assets/135222568/1cdf81e1-0bd4-47d8-b232-6aa16ff54db0">
 
 *Figure 6 Image classified by CLIP3 as Zoology (27.83 %) and Anatomy (24.56 %)*
 
-Finally, an example that we would actually have expected, is a botanical drawing classified as both Botany and Zoology with a 25.93 % certainty. 
+Finally, an example that we would actually have expected, is a botanical drawing classified as both Botany and Zoology with a 25.93 % certainty (Figure 7): 
 
 <img width="333" alt="FIgure 7" src="https://github.com/lkalvoda/DHH23_early-modern_classification-eval/assets/135222568/0a9e9213-2ebd-4271-b437-6a7913b747c9">
 
