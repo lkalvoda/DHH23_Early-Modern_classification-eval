@@ -213,7 +213,7 @@ Finally, an example that we would actually have expected, is a botanical drawing
 
 With the above in mind, when we turn back to Table 7, we can see that the largest portion of entries was misclassified entirely (0-0). The 1-1 and 1-0 scores can be taken as one category, since both are perfectly correct. The 0-1 category is notably large, and would definitely merit further analysis, as described in the relevant section below.
 
-The summarising figures (for each choice out of the total of 270) are as follows:
+The summarised figures (for each choice out of the total of 270) are as follows:
 - first-choice correct: 91
 - first-choice incorrect: 179
   
