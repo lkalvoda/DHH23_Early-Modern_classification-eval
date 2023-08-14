@@ -158,8 +158,11 @@ Next (this further narrowing down of the subsets was mainly due to the high numb
 
 *Table 6 Number of entries for analysis in the 'Low-confidence' subset*
 
-I close-read the randomly generated entries to verify whether the CLIP3 classification given for each of these corresponds to my own (i.e., human-produced) classification. I noted this down in a 0-1 system. I annotated both the first- and the second-choice classification in this manner, and the close-reading analysis results are as follows:
-
+I close-read the randomly generated entries to verify whether the CLIP3 classification given for each of these corresponds to my own (i.e., human-produced) classification. I noted this down in a 0-1 system. I annotated both the first- and the second-choice classification in this manner, and the close-reading analysis results follow below. The annotation possibilities were as such:<br>
+- 0-0 = neither classification is possibly correct
+- 0-1 = first-choice is incorrect, second-choice is correct
+- 1-0 = first-choice is correct, second-choice is incorrect
+- 1-1 = both classifications are correct (acceptable)
 
 Note: A potential caveat of this method is that even a human assessor cannot always classify an illustration with full certainty, either; e.g., Anatomy v Botany in Figure 1 below. In this particular case, CLIP3 classified this image as Anatomy (20.57 %) or Botany (19.02 %), so both answers were noted as '1'. The approach taken is the same used in the group work evaluation: if a classification is feasible, it is regarded as correct; otherwise, it is obviously incorrect. For example, in Figure 2 we can see an image that would belong to Miscellaneous/Other, so both the first-choice Zoology (20.73 %) and the second-choice Mechanics/Tools (20.09 %) get a score of '0'.
 
@@ -176,33 +179,33 @@ It must be stressed that often, it is simply not possible for a human annotator 
 A strong tendency observed in the 'Low-confidence' subset was for images to be falsely classified as either Zoology or Architecture, no matter their human-annotated class.
 A peculiar example (Figures 3 and 4) that was quite frequent was (obviously to the human eye) geometric shapes classified by CLIP3 as first-class Zoology.
 
-<img width="676" alt="Figure 3" src="https://github.com/lkalvoda/DHH23_early-modern_classification-eval/assets/135222568/7db7b2a1-8f1a-4bdb-b55d-a50c0fa999d2">
+<img width="200" alt="Figure 3" src="https://github.com/lkalvoda/DHH23_early-modern_classification-eval/assets/135222568/7db7b2a1-8f1a-4bdb-b55d-a50c0fa999d2">
 
 *Figure 3 Image classified by CLIP3 as Zoology (27.73 %) and Miscellaneous/Other (24.48 %)*
 
-<img width="406" alt="Figure 4" src="https://github.com/lkalvoda/DHH23_early-modern_classification-eval/assets/135222568/0930cf25-95d7-4c86-9087-28b3b0c24a52">
+<img width="200" alt="Figure 4" src="https://github.com/lkalvoda/DHH23_early-modern_classification-eval/assets/135222568/0930cf25-95d7-4c86-9087-28b3b0c24a52">
 
 *Figure 4 Image classified by CLIP3 as Zoology (25.9 %) and Miscellaneous/Other (20.48 %)*
 
 Another CLIP3 tendency in this subset was classifying what we would describe as a single straight line, essentially (i.e. Miscellaneous/Other, or, possibly, Mathematics/Geometry/Astronomy) in the first choice as Zoology. In Figure 5, the second-choice classification is correct, but the first-choice one is somewhat staggering.
 
-<img width="191" alt="Figure 5" src="https://github.com/lkalvoda/DHH23_early-modern_classification-eval/assets/135222568/3b3a13ad-bedd-4946-bee2-7ecfaeeaf026">
+<img width="200" alt="Figure 5" src="https://github.com/lkalvoda/DHH23_early-modern_classification-eval/assets/135222568/3b3a13ad-bedd-4946-bee2-7ecfaeeaf026">
 
 *Figure 5 Image classified by CLIP3 as Zoology (27.51 %) and Miscellaneous/Other (15.67 %)*
 
 Figure 6 shows another example of an obvious misclassification (human-annotated only possibly as Miscellaneous/Other):
 
-<img width="140" alt="Figure 6" src="https://github.com/lkalvoda/DHH23_early-modern_classification-eval/assets/135222568/1cdf81e1-0bd4-47d8-b232-6aa16ff54db0">
+<img width="200" alt="Figure 6" src="https://github.com/lkalvoda/DHH23_early-modern_classification-eval/assets/135222568/1cdf81e1-0bd4-47d8-b232-6aa16ff54db0">
 
 *Figure 6 Image classified by CLIP3 as Zoology (27.83 %) and Anatomy (24.56 %)*
 
 Finally, an example that we would actually have expected, is a botanical drawing classified as both Botany and Zoology with a 25.93 % certainty (Figure 7): 
 
-<img width="333" alt="FIgure 7" src="https://github.com/lkalvoda/DHH23_early-modern_classification-eval/assets/135222568/0a9e9213-2ebd-4271-b437-6a7913b747c9">
+<img width="200" alt="FIgure 7" src="https://github.com/lkalvoda/DHH23_early-modern_classification-eval/assets/135222568/0a9e9213-2ebd-4271-b437-6a7913b747c9">
 
 *Figure 7 classified by CLIP3 as both Botany and Zoology with the same certainty (25.93 %)*
 
-some only have one correct primary -> 1,0, some could be in more -> 1,1
+
 
 for high-c, use eval table to have a look at sample of 270 distributed ?evenly? across that population => in both cases, log 'correct' as 1; 'incorrect' as 0; if 'incorrect' is more than X% from that sample,there is evidence supporting H4, resp. H5
 
