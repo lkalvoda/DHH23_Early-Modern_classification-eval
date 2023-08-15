@@ -223,7 +223,34 @@ The summarised figures (for each choice out of the total of 270) are as follows:
 presenting evidence in the direction of considering both H4a and H4b valid.
 
 
-for high-c, use eval table to have a look at sample of 270 distributed ?evenly? across that population => in both cases, log 'correct' as 1; 'incorrect' as 0; if 'incorrect' is more than X% from that sample,there is evidence supporting H4, resp. H5
+The distribution of the sample (n=270) of entries analysed in the same manner in the 'High-confidence' subset is shown in Table 8 below.
+
+| Score range | Number of entries for analysis |
+| :---------- | :------------------------------|
+| (70-75]     | 22                             |
+| (75-80]     | 21                             |
+| (80-85]	  | 23                             |
+| (85-90]	  | 28                             |
+| (90-95]	  | 34                             |
+| (95-100]	  | 142                            |
+| **Σ**       | **270**                        | 
+
+
+![image](https://github.com/lkalvoda/DHH23_early-modern_classification-eval/assets/135222568/8ff7ac77-117d-4344-986f-da2fb4b48280)
+
+*Table 8 Number of entries for analysis in the 'High-confidence' subset*
+
+Annotating this subset in the same manner as the 'Low-confidence' one above, Table 9 shows the distribution of correctness of CLIP3 classification combinations in this subset:<br>
+
+| First-second                                              | Occurrences in 'High-confidence' subset |
+| :-------------------------------------------------------- | :---------------------------------------|
+| 0-0 = neither classification is possibly correct          |                                     |
+| 0-1 = first-choice is incorrect, second-choice is correct |                                     |
+| 1-0 = first-choice is correct, second-choice is incorrect |                                     |
+| 1-1 = both classifications are correct (acceptable)       |                                     |
+| **Σ**                                                     | **270**                                | 
+
+
 
 
 
