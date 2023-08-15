@@ -112,12 +112,12 @@ To answer the above, I examined the 'first-choice category' values in the primar
 
 To test H4a/b and H5a/b, I started by filtering out entries with the highest and the lowest first-choice confidence scores in the following ranges:<br>
 **'Low-confidence' subset**  (2734 entries)<br>
-      x ∈ (0;30] <br>
-i.e.  0 < x ≤ 30.(0)
+      x ∈ [0;30) <br>
+i.e.  0 ≤ x < 30.(0)
 
 
 **'High confidence' subset** (95 781 entries)<br>
-      x ∈ (70;30]<br>
+      x ∈ (70;100]<br>
 i.e.  70.(0) < x ≤ 100.(0)
 
 For the 'Low-confidence' subset, I started by looking at the distribution of certainty scores:<br>
@@ -137,12 +137,12 @@ Besides being a valuable item of information in and of itself, it allowed me to 
 
 | Score range | Number of entries |
 | :---------- | :-----------------|
-| [70-75)     | 7904              |
-| [75-80)     | 7857              |
-| [80-85)	  | 8089              |
-| [85-90)	  | 9443              |
-| [90-95)	  | 12161             |
-| [95-100)	  | 50327             |
+| (70-75]     | 7904              |
+| (75-80]     | 7857              |
+| (80-85]	  | 8089              |
+| (85-90]	  | 9443              |
+| (90-95]	  | 12161             |
+| (95-100]	  | 50327             |
 | **Σ**       | **95781**         | 
 
 *Table 5 Detailed distribution of entries per certainty score range in the 'High-confidence' subset*
