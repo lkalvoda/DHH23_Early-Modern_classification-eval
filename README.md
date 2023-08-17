@@ -75,16 +75,18 @@ A spreadsheet containing (per image):
 - CLIP3 second-choice category and the certainty score of that classification (-,,-)
 
 ### Secondary data
+(used for refining the RQ and hypotheses; would recommend for exploration of H2, H3)
 A spreadsheet containing (per every image from CLIP3 first-choice):
 - its URL (see Primary data)
 - CLIP3 first-choice category (see Primary data)
-- evaluation score of that classification (i.e., a percentage score expressing the probability of a human annotator classifying an image as belonging in the same first-choice category as CLIP3 did; based on human-annotated control batch produced by the group)
+- evaluation score of that classification (i.e., a percentage score expressing the probability of a human annotator classifying an image as belonging in the same first-choice category as CLIP3 did; based on human-annotated control batch produced by the group)<br>
+Various visualisations based on the above spreadsheet (created during the hackathon)
 
 
 ## Research question(s), hypotheses
 RQ: Do the certainty scores in CLIP3 predictions correspond to the actual categories and/or visual form of the images classified, and, if so, then what are the tendencies? Is there significant variation in performance between clategories? Are there CLIP3 predictions not corresponding to human classification in cases classified by CLIP with low/high confidence? What can we conclude about the performance of a model thus customised?
 
-**H0:** There are no significant patterns in the performance of CLIP3 across categories.
+**H0:** There are no significant patterns in the performance of CLIP3 across certainty levels and categories.
 
 **H1:** There is a significant amount of misclassified images (as compared to human-produced classification).<br>
 (fals.: There is not a significant amount of misclassified images (as compared to human-produced classification).)
@@ -107,7 +109,7 @@ RQ: Do the certainty scores in CLIP3 predictions correspond to the actual catego
 **H5b:** A significant amount of second-choice classifications made by CLIP3 does not correspond to human classification in those cases where CLIP3 states high prediction confidence.<br>
 (fals.: There is not a significant amount of second-choice classifications made by CLIP3 that do not correspond to human classification in those cases where CLIP3 states high prediction confidence.)
 
-## Methods
+## Methods, results
 To answer the above, I examined the 'first-choice category' values in the primary data, focussing mainly on the highest and the lowest confidence values to scan the data for possible patterns. To interpret any tendencies found, I used preliminary evaluation data produced during the Hackathon ('Secondary data' above), and close-reading of the images themselves. 
 
 To test H4a/b and H5a/b, I started by filtering out entries with the highest and the lowest first-choice confidence scores in the following ranges:<br>
@@ -209,7 +211,7 @@ Finally, an example that we would actually have expected, is a botanical drawing
 
 <img width="200" alt="FIgure 7" src="https://github.com/lkalvoda/DHH23_early-modern_classification-eval/assets/135222568/0a9e9213-2ebd-4271-b437-6a7913b747c9">
 
-*Figure 7 classified by CLIP3 as both Botany and Zoology with the same certainty (25.93 %)*
+*Figure 7 Image classified by CLIP3 as both Botany and Zoology with the same certainty (25.93 %)*
 
 With the above in mind, when we turn back to Table 7, we can see that the largest portion of entries was misclassified entirely (0-0). The 1-1 and 1-0 scores can be taken as one category, since both are perfectly correct. The 0-1 category is notably large, and would definitely merit further analysis, as described in the relevant section below.
 
@@ -235,12 +237,9 @@ Onto our second dataset, the distribution of the sample (n=270) of entries analy
 | (95-100]	  | 142                            |
 | **Σ**       | **270**                        | 
 
-
-![image](https://github.com/lkalvoda/DHH23_early-modern_classification-eval/assets/135222568/8ff7ac77-117d-4344-986f-da2fb4b48280)
-
 *Table 8 Number of entries for analysis in the 'High-confidence' subset*
 
-Annotating this subset in the same manner as the 'Low-confidence' one above, Table 9 shows the distribution of correctness of CLIP3 classification combinations in this subset:<br>
+Annotating this subset in the same manner as the 'Low-confidence' one above, Table 9 shows the distribution of correctness of CLIP3 classification combinations in this subset:
 
 | First-second                                              | Occurrences in 'High-confidence' subset |
 | :-------------------------------------------------------- | :---------------------------------------|
@@ -250,6 +249,7 @@ Annotating this subset in the same manner as the 'Low-confidence' one above, Tab
 | 1-1 = both classifications are correct (acceptable)       | 15                                      |
 | **Σ**                                                     | **270**                                 | 
 
+*Table 9 The four annotation possibilities for human evaluation of CLIP3 classifications of the 'High-confidence' subset (random weighted sample) explained; how many times each one of these combinations occurrs in the dataset*
 
 The summarised figures (for each choice out of 270) in this subset are as follows:
 - first-choice correct: 236
@@ -261,21 +261,50 @@ The summarised figures (for each choice out of 270) in this subset are as follow
 presenting evidence in the direction of H5a being false. This is expected, but what is more interesting is the data's supporting H5b. At a first glance, a large portion of the second-choice classifications from the annotated sample being incorrect might seem like a 'negative' metric. However - and this was one of the motivations behind the mixed design - in the 'High'confidence' dataset, this turns out to be in majority because the entries in question can actually only be classified as a single class. Therefore, the only 'correct' combination is 1-0.
 
 
+H1 is very broad, so to answer it, I first consider the outcomes of H4a,b and H5a,b with the following rationale: the presence of evidence supporting one or more of these increases the likelihood of H1 being supported by the data, too. As it is the case for H4a,b and 5b:
 
-------- H1 is very broad, so to answer it, I first consider the outcomes of H4 and H5 with the following rationale: if there is evidence supporting either one or both, I presume it more likely for H1 to be supported. If this is the case, I will examine a more representative selection of data in order to examine H1. -----------
-entries with the lowest and the highest confidence scores (0-20, 80-100, ?and those in the middle, to have a better idea: 40-60/45-55) - depending on the results from H4, H5-------------
+H4a: A significant amount of first-choice classifications made by CLIP3 does not correspond to human classification in those cases where CLIP3 states low prediction confidence;<br>
+H4b: A significant amount of second-choice classifications made by CLIP3 does not correspond to human classification in those cases where CLIP3 states low prediction confidence;<br>
+H5b: A significant amount of second-choice classifications made by CLIP3 does not correspond to human classification in those cases where CLIP3 states high prediction confidence,
 
+I choose to examine H1. In order to do that, the selection of data is extended slightly to be more representative. The 'H1 dataset' is comprised of the 'Low-confidence' and the 'High-confidence' datasets, plus a 'Mid-confidence' smaller one, spanning entries with 45-55 % certainty.<br>
+Using the same method as before, we look at the distribution of entries across the category:
 
+| Score range | Number of entries |
+| :---------- | :-----------------|
+| [45-50)     | 8052              |
+| [50-55)     | 8902              |
+| **Σ**       | **16954**         | 
+
+*Table 10 Detailed distribution of entries per certainty score range in the 'Mid-confidence' subset*
+
+In consistency with the samples from the abovementioned, 270 entries chosen randomly from the 'Mid-confidence' dataset will be examined by close-reading (weighted as per table 11 below).
+
+| Score range | Number of entries for analysis |
+| :---------- | :------------------------------|
+| [45-50)     | 127                            |
+| [50-55)     | 143                            |
+| **Σ**       | **270**                        | 
+
+*Table 11 Number of entries for analysis in the 'Mid-confidence' subset*
+
+We can see the distribution of correctness of CLIP3 classification combinations in this subset in Table 12:
+
+| First-second                                              | Occurrences in 'High-confidence' subset |
+| :-------------------------------------------------------- | :---------------------------------------|
+| 0-0 = neither classification is possibly correct          |                                       |
+| 0-1 = first-choice is incorrect, second-choice is correct |                                       |
+| 1-0 = first-choice is correct, second-choice is incorrect |                                       |
+| 1-1 = both classifications are correct (acceptable)       |                                       |
+| **Σ**                                                     | **270**                                 | 
+
+*Table 12 The four annotation possibilities for human evaluation of CLIP3 classifications of the 'Mid-confidence' subset (random weighted sample) explained; how many times each one of these combinations occurrs in the dataset*
 
 H2 and H3: take the bottom and top 30 results and check what the distribution is across categories -> graphs
 
 
-## Results
-
-
-
 ## Conclusions
-
+ 
 
 
 ## Future directions
