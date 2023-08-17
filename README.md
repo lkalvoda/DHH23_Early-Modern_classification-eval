@@ -223,7 +223,7 @@ The summarised figures (for each choice out of the total of 270) are as follows:
 presenting evidence in the direction of considering both H4a and H4b valid.
 
 
-The distribution of the sample (n=270) of entries analysed in the same manner in the 'High-confidence' subset is shown in Table 8 below.
+Onto our second dataset, the distribution of the sample (n=270) of entries analysed in the same manner in the 'High-confidence' subset is shown in Table 8 below.
 
 | Score range | Number of entries for analysis |
 | :---------- | :------------------------------|
@@ -244,13 +244,21 @@ Annotating this subset in the same manner as the 'Low-confidence' one above, Tab
 
 | First-second                                              | Occurrences in 'High-confidence' subset |
 | :-------------------------------------------------------- | :---------------------------------------|
-| 0-0 = neither classification is possibly correct          |                                     |
-| 0-1 = first-choice is incorrect, second-choice is correct |                                     |
-| 1-0 = first-choice is correct, second-choice is incorrect |                                     |
-| 1-1 = both classifications are correct (acceptable)       |                                     |
-| **Σ**                                                     | **270**                                | 
+| 0-0 = neither classification is possibly correct          | 13                                      |
+| 0-1 = first-choice is incorrect, second-choice is correct | 14                                      |
+| 1-0 = first-choice is correct, second-choice is incorrect | 224                                     |
+| 1-1 = both classifications are correct (acceptable)       | 15                                      |
+| **Σ**                                                     | **270**                                 | 
 
 
+The summarised figures (for each choice out of 270) in this subset are as follows:
+- first-choice correct: 236
+- first-choice incorrect: 34
+  
+- second-choice correct: 33
+- second-choice incorrect: 237,
+
+presenting evidence in the direction of H5a being false. This is expected, but what is more interesting is the data's supporting H5b. At a first glance, a large portion of the second-choice classifications from the annotated sample being incorrect might seem like a 'negative' metric. However - and this was one of the motivations behind the mixed design - in the 'High'confidence' dataset, this turns out to be in majority because the entries in question can actually only be classified as a single class. Therefore, the only 'correct' combination is 1-0.
 
 
 
