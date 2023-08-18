@@ -302,6 +302,7 @@ We can see the distribution of correctness of CLIP3 classification combinations 
 
 H2 and H3: take the bottom and top 30 results and check what the distribution is across categories -> graphs
 
+worth examining: does correctness increase w certainty? same methodology, but an even wider sample and even distribution
 
 ## Conclusions
  
@@ -313,6 +314,7 @@ Performing a similar mixed-methods analysis on the prediction results made by CL
 For the overview collected for H4a/b, it could be directly applicable to get more information on the patterns in the 0-1 category. Close-reading analysis could provide directions for specification alterations to get the result to 'flip' to 1-0 or 1-1. The correct second-choice classification might be a very useful lead for a relatively low-effort boost (cf. e.g., the 0-0 case).<br>
 The evidence collected for H4a/b being true aligns with the low certainty levels given by CLIP3 for the classification instances in the 'Low-confidence' subset. Also in the light of this, we would expect the opposite tendency in the 'High-confidence' subset.
 
+Based on observation from the close-reading analysis, it might be beneficial to redefine the 'Architecture' category. Images ofetn fall between this and other categories (particularly 'Mathematics/Geometry/Astronomy' - building plan v 'generic' geometric drawing, as opposed to a hand-drawn column or building). One option might be to re-name the category and revise its keywords, so that it doesn't include any plans. Another one could be to split it between 'Mathematics/Geometry/Astronomy', 'Botany', 'Miscellaneous/Other', ...).
 
 ## Acknowledgements
 I'd like to thank Ari Vesalainen for providing me with valuable details on the three model runs.
