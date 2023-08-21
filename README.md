@@ -292,15 +292,40 @@ We can see the distribution of correctness of CLIP3 classification combinations 
 
 | First-second                                              | Occurrences in 'High-confidence' subset |
 | :-------------------------------------------------------- | :---------------------------------------|
-| 0-0 = neither classification is possibly correct          |                                       |
-| 0-1 = first-choice is incorrect, second-choice is correct |                                       |
-| 1-0 = first-choice is correct, second-choice is incorrect |                                       |
-| 1-1 = both classifications are correct (acceptable)       |                                       |
+| 0-0 = neither classification is possibly correct          | 46                                      |
+| 0-1 = first-choice is incorrect, second-choice is correct | 77                                      |
+| 1-0 = first-choice is correct, second-choice is incorrect | 121                                     |
+| 1-1 = both classifications are correct (acceptable)       | 26                                      |
 | **Σ**                                                     | **270**                                 | 
 
 *Table 12 The four annotation possibilities for human evaluation of CLIP3 classifications of the 'Mid-confidence' subset (random weighted sample) explained; how many times each one of these combinations occurrs in the dataset*
 
-A noteworthy occurrence in the 'Mid-confidence' subset is the misclassification of an image obviously belonging into 'Botany' as 'Zoology'. The certainty scores in this misclassification are (inherently in this subset) of similar values x(%) ∈ [45-55) with images so obviously belonging into 'Botany' that we would expect to have a first-choice 'Botany' classification value of, say, at least 70 %.
+A noteworthy occurrence in the 'Mid-confidence' subset is the misclassification of an image obviously belonging into 'Botany' as 'Zoology'. The certainty scores in this misclassification are (inherently in this subset) of similar values x(%) ∈ [45-55) with images so obviously belonging into 'Botany' that we would expect to have a first-choice 'Botany' classification value of, say, at least 70 %. In other cases, such as in Figure 8 below, images were classified correctly as 'Botany', but with a surprisingly low confidence score regarding the characteristics of the image.
+
+<img width="200" alt="Figure 8" src="https://github.com/lkalvoda/DHH23_early-modern_classification-eval/assets/135222568/f917eb8f-c702-4240-b14b-2de9300abea3">
+
+*Figure 8 Image classified by CLIP3 as Botany (48.14 %; correct, but unexpectedly low first-choice score) and zoology (33.12 %)*
+
+More examples of 'obvious' misclassification can be observed below. 
+In the Figure 9 image, showing mechanical tools, classified incorrectly as 'Zoology' (45.83 %) and 'Mathematics/Geometry/Astronomy' (27.78 %). 
+Figure 10, not only showing plants, but even containing descriptions containing quite clear keywords, was classified as 'Miscellaneous/Other' (46.85 %) and 'Zoology' (31.2 %) instead of 'Botany'.
+Two more considerable misclassification examples are shown below: what should be 'Cooking' in Figure 11 as 'Zoology' (76.56 %) and 'Microbiology' (17.63 %); the 'Mathematics/Geometry/Astronomy' in Figure 12 only being the second choice at 19.19 %, with the (incorrect) first choice being 'Miscellanoeus/Other' (74.75 %).
+
+<img width="200" alt="Figure 9" src="https://github.com/lkalvoda/DHH23_early-modern_classification-eval/assets/135222568/57d85e1b-022b-47fb-b644-aef4b182917c">
+
+*Figure 9 Image classified incorrectly by CLIP3 as 'Zoology' and 'Mathematics/Geometry/Astronomy'*
+
+<img width="200" alt="Figure 10" src="https://github.com/lkalvoda/DHH23_early-modern_classification-eval/assets/135222568/31bba60c-2b45-41e7-920c-0532176b800c">
+
+*Figure 10 Image classified incorrectly by CLIP3 as 'Miscellaneous/Other' and 'Zoology'*
+
+<img width="200" alt="Figure 11" src="https://github.com/lkalvoda/DHH23_early-modern_classification-eval/assets/135222568/63a040fc-d64d-477e-b4e3-1467ca41a267">
+
+*Figure 11 'Cooking' image classified incorrectly by CLIP3 as 'Zoology' and 'Microbiology'*
+
+<img width="200" alt="Figure 12" src="https://github.com/lkalvoda/DHH23_early-modern_classification-eval/assets/135222568/ea41b9a6-222a-4876-aba1-bf7375ba2937">
+
+*Figure 12 'Mathematics/Geometry/Astronomy' image (only second-choice) with a CLIP3 first-choice in 'Miscellanoeus/Other'*
 
 H2 and H3: take the bottom and top 30 results and check what the distribution is across categories -> graphs
 
