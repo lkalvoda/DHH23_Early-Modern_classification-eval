@@ -300,6 +300,8 @@ We can see the distribution of correctness of CLIP3 classification combinations 
 
 *Table 12 The four annotation possibilities for human evaluation of CLIP3 classifications of the 'Mid-confidence' subset (random weighted sample) explained; how many times each one of these combinations occurrs in the dataset*
 
+A noteworthy occurrence in the 'Mid-confidence' subset is the misclassification of an image obviously belonging into 'Botany' as 'Zoology'. The certainty scores in this misclassification are (inherently in this subset) of similar values x(%) ∈ [45-55) with images so obviously belonging into 'Botany' that we would expect to have a first-choice 'Botany' classification value of, say, at least 70 %.
+
 H2 and H3: take the bottom and top 30 results and check what the distribution is across categories -> graphs
 
 worth examining: does correctness increase w certainty? same methodology, but an even wider sample and even distribution
