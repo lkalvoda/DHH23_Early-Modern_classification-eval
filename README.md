@@ -71,7 +71,7 @@ analyses and subsequent interpretation. However, the accurracy span was wide in 
 ### Primary data
 A spreadsheet containing (per image):
 - its URL (from a database containing all images from the dataset; for qualitative close-reading analysis)
-- CLIP3 first-choice category and the certainty score of that classification (score is based on training data; for CLIP3, this is human-produced image classification annotations; sme for the second-choice)
+- CLIP3 first-choice category and the certainty score of that classification (score is based on training data; for CLIP3, this is human-produced image classification annotations; same for the second-choice)
 - CLIP3 second-choice category and the certainty score of that classification
 
 ### Secondary data
