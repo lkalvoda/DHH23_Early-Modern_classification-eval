@@ -22,7 +22,7 @@ During the hackathon, three different image classification iterations were run, 
 
 *Table 1 The figures for our training data images, as classified into categories by human annotators*
 
-These served as the training data for all three runs, with the second and third run having additional modifications. A line of reasoning to be examined below is whether the amount of training material in a category could affect the performance in it. However, a counter-argument would be that the sample was chosen randomly and presumed to be representative of the population (i.e., the whole dataset the group worked with).
+These served as the training data for all three runs, with the second and third run having additional modifications. A line of reasoning that could be examined is whether the amount of training material in a category could affect the performance in it. However, a counter-argument would be that the sample was chosen randomly and presumed to be representative of the population (i.e., the whole dataset the group worked with). This exploratory analysis works with the assumption of the second.
 
 **2. For the second run (CLIP2)**, the number and names of both classes and keywords were changed to:
 
