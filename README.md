@@ -60,13 +60,12 @@ These served as the training data for all three runs, with the second and third 
 
 *Table 3 Categories and keywords for CLIP3*
 
-Additionally, while CLIP1 and 2 both gave the top one classification prediction only, with CLIP3, we had it
-provide the two highest value predictions. This 'second most likely class' in the CLIP3 data and the above information on categories and keywords make CLIP3 ideal for further analysis. The results could shed light on specifications desirable for work with similar Enlightenment era book illustrations.
+Additionally, while CLIP1 and 2 both gave the top one classification prediction only, we had CLIP3 provide the two highest value predictions. This 'second most likely class' in the CLIP3 data and the above information on categories and keywords make CLIP3 ideal for further analysis. The results could shed light on specifications desirable for work with similar Enlightenment era book illustrations.
 
 In the hackathon outcomes, only classification entries with min. 50% accuracy for the first candidate were included into the
 analyses and subsequent interpretation. However, the accurracy span was wide in all three runs. In this task, I summarise these tendencies, verify them with close-reading, and speculate on their possible reasons and outcomes. I do this on the data for the third run (CLIP3), for the following reasons:
 - the data from this run also provides the second most probable category the model assigned to each entry, which can shed light on the model's behaviour with this type of a dataset
-- the model used in the third run was already customised based on human-annotated feedback on the previous two
+- the model used in the third run was already customised based on human-annotated feedback on the previous two runs
 
 ### Primary data
 A spreadsheet containing (per image):
@@ -134,7 +133,7 @@ For the 'Low-confidence' subset, I started by looking at the distribution of cer
 
 *Table 4 Detailed distribution of entries per certainty score range in the 'Low-confidence' subset*
 
-Besides being a valuable item of information in and of itself, it allowed me to take a weighted sample from each subset for the close-reading result verification below. Doing this enabled me to conduct a mixed-methods analysis viably, especially later for the second subset. Below is the same data for the second subset:
+Besides being a valuable item of information in and of itself, it allowed me to take a weighted sample from each subset for the close-reading result verification below. Doing this enabled me to conduct a mixed-methods exploratory analysis viably, especially later for the second subset. Below is the same data for the second subset:
 
 | Score range | Number of entries |
 | :---------- | :-----------------|
@@ -148,7 +147,7 @@ Besides being a valuable item of information in and of itself, it allowed me to 
 
 *Table 5 Detailed distribution of entries per certainty score range in the 'High-confidence' subset*
 
-Next it was necessary to further narrow down the subsets, mainly due to the high number of entries especially in the second subset. I took a random sample of approximately 270 entries (guided by: 10% of 'Low-confidence' subset). The distribution across the 'Score ranges' (See Table 4 above) was weighted by the respective number of entries in these; i.e., for the 'Low-confidence' subset:
+Next, it was necessary to further narrow down the subsets, mainly due to the high number of entries especially in the second subset. I took a random sample of approximately 270 entries (guided by: 10% of 'Low-confidence' subset). The distribution across the 'Score ranges' (See Table 4 above) was weighted by the respective number of entries in these; i.e., for the 'Low-confidence' subset:
 
 | Score range | Number of entries for analysis |
 | :---------- | :------------------------------|
@@ -159,7 +158,7 @@ Next it was necessary to further narrow down the subsets, mainly due to the high
 
 *Table 6 Number of entries for analysis in the 'Low-confidence' subset*
 
-I close-read the randomly generated entries to verify whether the CLIP3 classification given for each of these corresponds to my own (i.e., human-produced) classification. I noted this down in a 0-1 system. I annotated both the first- and the second-choice classification in this manner, and the close-reading analysis results follow below. Table 7 shows the four annotation possibilities and the actual distribution of these among the 270 entries annotated:<br>
+I close-read the randomly chosen entries to verify whether the CLIP3 classification given for each of these corresponds to my own (i.e., human-produced) classification. I noted this down in a 0-1 system. I annotated both the first- and the second-choice classification in this manner, and the close-reading analysis results follow below. Table 7 shows the four annotation possibilities and the actual distribution of these among the 270 entries annotated:<br>
 
 | First-second                                              | Occurrences in 'Low-confidence' subset |
 | :-------------------------------------------------------- | :--------------------------------------|
@@ -181,7 +180,7 @@ Note: A potential caveat of this method is that even a human assessor cannot alw
 
 *Figure 2 Image annotated as incorrectly classified by CLIP3 as either Zoology or Mechanics/Tools*
 
-It must be stressed that often, it is simply not possible for a human annotator to classify an image into one category, either, in which case any CLIP3 classification that is not in clear contradiction with the annotator's observation is noted as correct. Below are several examples of different kinds of frequent misclassifications (first-choice or both choices).
+It must be stressed that it is often simply not possible for a human annotator to classify an image into one category either, in which case any CLIP3 classification that is not in clear contradiction with the annotator's observation is noted as correct. Below are several examples of different kinds of frequent misclassifications (first-choice or both choices).
 
 A strong tendency observed in the 'Low-confidence' subset was for images to be falsely classified as either Zoology or Architecture, no matter their human-annotated class.
 A peculiar example (Figures 3 and 4) that was quite frequent was (obviously to the human eye) geometric shapes classified by CLIP3 as first-class Zoology.
@@ -215,15 +214,15 @@ Finally, an example that we would actually have expected, is a botanical drawing
 With the above in mind, when we turn back to Table 7, we can see that the largest portion of entries was misclassified entirely (0-0). The 1-1 and 1-0 scores can be taken as one category, since both are perfectly correct. The 0-1 category is notably large, and would definitely merit further analysis, as described in the relevant section below.
 
 The summarised figures (for each choice out of the total of 270) are as follows:
-- **first-choice correct**: 91
-- **first-choice incorrect**: 179
-- **second-choice correct**: 100
-- **second-choice incorrect**: 170,
+- **first-choice correct**: 91 (33.7%)
+- **first-choice incorrect**: 179 (66.3%)
+- **second-choice correct**: 100 (37%)
+- **second-choice incorrect**: 170 (63%),
 
 presenting evidence in the direction of considering both H4a and H4b valid.
 
 
-Onto our second dataset, the distribution of the sample (n=270) of entries analysed in the same manner in the 'High-confidence' subset is shown in Table 8 below.
+Moving on to our second dataset, the distribution of the sample (n=270) of entries analysed in the same manner in the 'High-confidence' subset is shown in Table 8 below.
 
 | Score range | Number of entries for analysis |
 | :---------- | :------------------------------|
@@ -249,23 +248,23 @@ Annotating this subset in the same manner as the 'Low-confidence' one above, Tab
 
 *Table 9 The four annotation possibilities for human evaluation of CLIP3 classifications of the 'High-confidence' subset (random weighted sample) explained; how many times each one of these combinations occurs in the dataset*
 
-The summarised figures (for each choice out of 270) in this subset are as follows:
-- **first-choice correct**: 238
-- **first-choice incorrect**: 32
-- **second-choice correct**: 34
-- **second-choice incorrect**: 236,
+The summarised figures (for each choice out of 270) in this subset are as follow:
+- **first-choice correct**: 238 (88%)
+- **first-choice incorrect**: 32 (12%)
+- **second-choice correct**: 34 (12.6%)
+- **second-choice incorrect**: 236 (87.4%),
 
-presenting evidence in the direction of H5a being false. This is expected, but what is more interesting is the data's supporting H5b. At a first glance, a large portion of the second-choice classifications from the annotated sample being incorrect might seem like a 'negative' metric. However - and this was one of the motivations behind the mixed design - in the 'High'confidence' dataset, this turns out to be in majority because the entries in question can actually only be classified as a single class. Therefore, the only 'correct' combination is 1-0.
+presenting evidence in the direction of H5a being false. This is expected; however, what is more interesting is the data's supporting H5b. At a first glance, a large portion of the second-choice classifications from the annotated sample being incorrect might seem like a 'negative' metric. However - and this was one of the motivations behind the mixed design - in the 'High'confidence' dataset, this turns out to be from a large part because the entries in question can actually only be classified as a single class. Therefore, the only 'correct' combination is 1-0.
 
 
-H1 is very broad, so to answer it, I first consider the partial outcomes of H4 and H5 with the following rationale: the presence of evidence supporting one or more of these increases the likelihood of H1 being supported by the data, too. i.e., as it seems to be the case that:
+H1 is very broad, so, to answer it, I first consider the partial outcomes of H4a/b and H5a/b with the following rationale: the presence of evidence supporting one or more of these increases the likelihood of H1 being supported by the data, too. i.e., as it seems to be the case that:
 
 H4a: A significant amount of first-choice classifications made by CLIP3 does not correspond to human classification in those cases where CLIP3 states low prediction confidence;<br>
 H4b: A significant amount of second-choice classifications made by CLIP3 does not correspond to human classification in those cases where CLIP3 states low prediction confidence;<br>
 H5b: A significant amount of second-choice classifications made by CLIP3 does not correspond to human classification in those cases where CLIP3 states high prediction confidence,
 
-I choose to examine H1. In order to do that, the selection of data is extended slightly to be more representative. The 'H1 dataset' is comprised of the 'Low-confidence' and the 'High-confidence' datasets, plus a 'Mid-confidence' smaller one, spanning entries with 45-55% certainty.<br>
-Using the same method as before, we look at the distribution of entries across the category:
+I do choose to examine H1. In order to do that, the selection of data is extended slightly to be more representative. The 'H1 dataset' is comprised of the 'Low-confidence' and the 'High-confidence' datasets, plus a 'Mid-confidence' smaller one, spanning entries with 45-55% certainty.<br>
+Using the same method as before, we can take a look at the distribution of entries across the category:
 
 | Score range | Number of entries |
 | :---------- | :-----------------|
@@ -275,7 +274,7 @@ Using the same method as before, we look at the distribution of entries across t
 
 *Table 10 Detailed distribution of entries per certainty score range in the 'Mid-confidence' subset*
 
-In consistency with the samples from the abovementioned, 270 entries chosen randomly from the 'Mid-confidence' dataset will be examined by close-reading (weighted as per table 11 below).
+In consistency with the samples from the abovementioned two subsets, 270 entries chosen randomly from the 'Mid-confidence' dataset will be examined by close-reading (weighted as per table 11 below).
 
 | Score range | Number of entries for analysis |
 | :---------- | :------------------------------|
@@ -297,7 +296,7 @@ We can see the distribution of correctness of CLIP3 classification combinations 
 
 *Table 12 The four annotation possibilities for human evaluation of CLIP3 classifications of the 'Mid-confidence' subset (random weighted sample) explained; how many times each one of these combinations occurrs in the dataset*
 
-A noteworthy occurrence in the 'Mid-confidence' subset is the misclassification of an image obviously belonging into 'Botany' as 'Zoology'. The certainty scores in this misclassification are (inherently in this subset) of similar values x(%) ∈ [45-55) with images so obviously belonging into 'Botany' that we would expect to have a first-choice 'Botany' classification value of, say, at least 70%. In other cases, such as in Figure 8 below, images were classified correctly as 'Botany', but with a surprisingly low confidence score regarding the characteristics of the image.
+A noteworthy occurrence in the 'Mid-confidence' subset is the misclassification of an image obviously belonging into 'Botany' as 'Zoology'. The certainty scores in these misclassifications are (inherently in this subset) of similar values: x(%) ∈ [45-55). This is the case for images so obviously belonging into 'Botany' that we would expect to instead have a first-choice 'Botany' classification value of, say, at least 70%. In other cases, such as in Figure 8 below, images were classified correctly as 'Botany', but it was with a surprisingly low confidence score, taking into account the characteristics of the image.
 
 <img width="200" alt="Figure 8" src="https://github.com/lkalvoda/DHH23_early-modern_classification-eval/assets/135222568/f917eb8f-c702-4240-b14b-2de9300abea3">
 
@@ -306,7 +305,7 @@ A noteworthy occurrence in the 'Mid-confidence' subset is the misclassification 
 More examples of 'obvious' misclassification can be observed below.
 In the Figure 9 image, showing mechanical tools, classified incorrectly as 'Zoology' (45.83%) and 'Mathematics/Geometry/Astronomy' (27.78%).
 Figure 10, not only showing plants, but even containing descriptions containing quite clear keywords, was classified as 'Miscellaneous/Other' (46.85%) and 'Zoology' (31.2%) instead of 'Botany'.
-Two more considerable misclassification examples are shown below: what should be 'Cooking' in Figure 11 as 'Zoology' (76.56%) and 'Microbiology' (17.63%); the 'Mathematics/Geometry/Astronomy' in Figure 12 only being the second choice at 19.19%, with the (incorrect) first choice being 'Miscellanoeus/Other' (74.75%).
+Two more considerable misclassification examples are shown below. First, what should be 'Cooking' in Figure 11 as 'Zoology' (76.56%) and 'Microbiology' (17.63%). Second, the 'Mathematics/Geometry/Astronomy' image in Figure 12 only being the second choice at 19.19%, with the (incorrect) first choice being 'Miscellanoeus/Other' (74.75%).
 
 <img width="200" alt="Figure 9" src="https://github.com/lkalvoda/DHH23_early-modern_classification-eval/assets/135222568/57d85e1b-022b-47fb-b644-aef4b182917c">
 
@@ -330,7 +329,7 @@ The summarised figures (for each choice out of 270) in the 'Mid-confidence' subs
 - **second-choice correct**: 102 (37.8%)
 - **second-choice incorrect**: 168 (62.2%)
 
-Table 13 below summarises the 'correctness' (i.e., alignment with human assessment) of the CLIP classifications. The first- and second-choice combination is described above, and the following three columns list the occurrences of these in the three subsets (Low-, Mid- and High-confidence).
+Table 13 below summarises the 'correctness' (i.e., alignment with human assessment) of all the CLIP classifications examined for the sake of looking at H1. The first- and second-choice combination is described above, and the following three columns list the occurrences of these in the three subsets (Low-, Mid- and High-confidence).
 
 | Combination        | L-c     | M-c     | H-c     |
 | :----------------- | :------ | :------ | :------ |
@@ -341,23 +340,23 @@ Table 13 below summarises the 'correctness' (i.e., alignment with human assessme
 
 *Table 13 Distribution of 'correctness' scores across subsets. Summary.*
 
-Examining H1, I consider the 0-0 and 0-1 (i.e., incorrect) combinations. I regard both as a misclassification, as the information on whether the second choice is 'getting closer' to the desired result is secondary in most direct uses, and rather useful for fine-tuning. The proportions of incorrect to correct entries (in each subset summing up to 270) are therefore:<br>
-- L-c: 180:90
-- M-c: 123:147
-- H-c: 28:242
+Examining H1, I consider the 0-0 and 0-1 (i.e., incorrect) combinations. I regard both as a misclassification, as the information on whether the second choice is 'getting closer' to the desired result is secondary in most direct uses, regardless of its being useful for possible fine-tuning. The proportions of incorrect to correct entries (in each subset summing up to 270) are therefore:<br>
+- L-c: 180:90 (66.(6)% : 33.(3)%)
+- M-c: 123:147 (45.6% : 54.4%)
+- H-c: 28:242 (10.4% : 89.6%)
 
-In the whole examined sample, it is 331:479 of incorrect:correct (sum 3*270=810). This is evidence in support of H1, as we can consider this a significant proportion of misclassified entries in our weighted sample.
+In the whole examined sample, the ratio is therefore 331:479 (40.9% : 59.1%) of incorrect:correct (sum 3*270=810). This is evidence in support of H1, as we can consider this a significant proportion of misclassified entries in our weighted sample.
 
 ## Conclusions
 To summarise:
 
 **H1: There is a significant amount of misclassified images (as compared to human-produced classification)** is supported by the analysis results.
 
-Furthermore, coming back to Table 13 and regarding the third and fourth row can be as one category ('correct' in either case), we can take a closer look at the development from row 1 to row 2 to rows 3/4 (i.e., 0-0 = completely incorrect (neither choice is correct) -> 0-1 = possibly approaching correct first choice -> correct).<br>
+Furthermore, coming back to Table 13 and regarding the third and fourth row as one category ('correct' in either case), we can take a closer look at the development from row 1 to row 2 to rows 3/4 (i.e., 0-0 = completely incorrect (neither choice is correct) -> 0-1 = possibly approaching correct first choice -> correct).<br>
 We can see a trend approaching decreasing (101-79-90) on this 'correctness scale' in the 'Low-confidence' subset.
 In the 'Mid-confidence' subset, the 'measure of approaching correctness', let us call it, is increasing (46-77-147).<br>
 In the 'High-confidence' subset, it is also increasing somewhat (13-15-242), but the divide is much sharper between strictly taken 'incorrect' and 'correct'.<br>
-This suggests that it could be worthwhile to examine further whether the higher the reported certainty score for a prediction is, the higher its chance for correctness actually is, as compared to human annotations. While these preliminary figures look promising, they are produced in a rather simple way, and cannot be taken as evidence for such a trend.
+This suggests that it could be worthwhile to examine further whether it holds that the higher the reported certainty score for a prediction is, the higher its chance for correctness actually is, as compared to human annotations. While these preliminary figures look promising, they are, for one, produced in a rather simple way and, for two, would ideally require statistical testing, and therefore cannot be taken as evidence for such a trend.
 
 **H2: CLIP3 performed significantly better in one or more categories (as compared to other categories)**, and
 
@@ -365,20 +364,20 @@ This suggests that it could be worthwhile to examine further whether the higher 
 
 **H4a: A significant amount of first-choice classifications made by CLIP3 does not correspond to human classification in those cases where CLIP3 states low prediction confidence**, and
 
-**H4b: A significant amount of second-choice classifications made by CLIP3 does not correspond to human classification in those cases where CLIP3 states low prediction confidence** are both supported by this task's analysis, meaning that neither choice given was actually correct when its confidence score was low (Although NB the second-choice caveat as referred to also in H5b right below).
+**H4b: A significant amount of second-choice classifications made by CLIP3 does not correspond to human classification in those cases where CLIP3 states low prediction confidence** are both supported by this task's analysis, meaning that neither choice given was actually correct when its confidence score was low (although, NB the second-choice caveat as referred to also in H5b right below).
 
 **H5a: A significant amount of first-choice classifications made by CLIP3 does not correspond to human classification in those cases where CLIP3 states high prediction confidence**, however, was not supported. This means that CLIP3 typically gave a correct first-choice classification in those cases where it stated a high confidence.
 
-**H5b: A significant amount of second-choice classifications made by CLIP3 does not correspond to human classification in those cases where CLIP3 states high prediction confidence** was supported. However, as mentioned already, this does not necessarily imply poor performance (which would contradict H5a in a way). While the results might partially consist of poor performance scores, a substantial part of second-choice 'incorrect' answers are because there is no correct one. However, the model always needed to give one. For ideas on further analysis, please see H2, H3.
+**H5b: A significant amount of second-choice classifications made by CLIP3 does not correspond to human classification in those cases where CLIP3 states high prediction confidence** was supported. However, as mentioned already, this does not necessarily imply poor performance (which would contradict H5a, in a way). While the results might partially consist of poor performance scores, a substantial part of second-choice 'incorrect' answers are because there is no correct one. However, the model always needed to give one. For ideas on further analysis, please see H2, H3.
 
 
 ## Future directions
 Performing a similar mixed-methods analysis on the prediction results made by CLIP1 and CLIP2 each, and then comparing all three runs could bring valuable insight into which features in particular had the most profound effect on the correspondence of the actual category and the one predicted. This could be in both directions: which specs increase the model's 'correctness' significantly, and are there perhaps any that we had predicted to be effective, but ended up making no to little difference?
 
-For the overview collected for H4a/b, it could be directly applicable to get more information on the patterns in the 0-1 category. Close-reading analysis could provide directions for specification alterations to get the result to 'flip' to 1-0 or 1-1. The correct second-choice classification might be a very useful lead for a relatively low-effort boost (compared with, for example, the 0-0 case).<br>
+For the overview collected for H4a/b, it could be directly applicable to get more information on the patterns in the 0-1 category. Close-reading analysis could provide directions for specification alterations to get the result to 'flip' to 1-0 or 1-1. The correct second-choice classification might be a very useful lead for a relatively low-effort boost (compared with the 0-0 case).<br>
 The evidence collected for H4a/b being true aligns with the low certainty levels given by CLIP3 for the classification instances in the 'Low-confidence' subset. Also in the light of this, we would expect the opposite tendency in the 'High-confidence' subset.
 
-Based on observation from the close-reading analysis, it might be beneficial to redefine the 'Architecture' category. Images often fall between this and other categories (particularly 'Mathematics/Geometry/Astronomy' - building plan v 'generic' geometric drawing, as opposed to a hand-drawn column or building). One option might be to re-name the category and revise its keywords, so that it doesn't include any plans. Another one could be to split it between 'Mathematics/Geometry/Astronomy', 'Botany', 'Miscellaneous/Other', ...).
+Based on observation from the close-reading analysis, it might be beneficial to redefine the 'Architecture' category. Images often fall between this and other categories (particularly 'Mathematics/Geometry/Astronomy' - building plan v 'generic' geometric drawing, as opposed to a hand-drawn column or building). One option might be to re-name the category and revise its keywords, so that it doesn't include any plans. Another one could be to split it between 'Mathematics/Geometry/Astronomy', 'Botany', 'Miscellaneous/Other', ...
 
 As already mentioned in the analysis included in the H1 part, it might be useful to investigate the relationship between a prediction's certainty score and its actual correctness.
 
